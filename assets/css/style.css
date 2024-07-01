@@ -104,4 +104,8 @@ input[type="checkbox"]:checked::after {
 .checkBox label{
     font-weight: bold;
 }
-
+.bottone:disabled{
+ color: white;
+ background-color: grey;
+ box-shadow: none;
+}
