@@ -52,16 +52,55 @@ font-weight: normal;
 .lista li span{
     font-weight: bold;
 }
-.checkBox, .bottone{
+.checkBox, .divBottone{
     display: inline-block;
-   
 }
 .checkBox{
     margin-left: 0.5em; 
     margin-top: 3em;
+    margin-right: 15%;
+}
+.bottone{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 18px 45px;
+    background-color: #00ffff;
+    border: none;
+    box-shadow: 0px 0px 22px #00ffff;    
+}
+input[type="checkbox"] {
+    appearance: none; 
+    width: 24px;
+    height: 24px;
+    border: 3px solid white;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s, border-color 0.3s;
+    vertical-align: middle; /* Allinea verticalmente con il testo */
+    margin-right: 10px;
 }
 
+/* Stile quando il checkbox è selezionato */
+input[type="checkbox"]:checked {
+    background-color: #cb2376;
+    border-color: #cb2376;
+}
 
-
-
+/* Aggiunge il segno di spunta */
+input[type="checkbox"]:checked::after {
+    content: '✓';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 14px;
+}
+.inputButton{
+    margin-top: 60px;
+}
+.checkBox label{
+    font-weight: bold;
+}
 
