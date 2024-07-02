@@ -1,64 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/Result.css" />
-    <title>results-page</title>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/Result.css">
+  <title>results-page</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="logo">
+      <img src="assets/img/epicode_logo.png" alt="epicode-logo" width="150px">
+    </nav>
+    <div class="title center">
+      <h1>Results</h1>
+      <h3>The summary of your answers:</h3>
+    </div>
+  </header>
 
-  <body>
-    <header>
-      <nav class="logo">
-        <a href="https:/www.epicode.com/it/" title="epicode" target="_blank">
-          <img
-            src="assets/img/epicode_logo.png"
-            alt="epicode-logo"
-            width="150px"
-          />
-        </a>
-      </nav>
-      <div class="title center">
-        <h1>Results</h1>
-        <h3>The summary of your answers:</h3>
+  <main>
+    <section id="correctDiv" class="center">
+      <div class="correct-content"></div>
+    </section>
+
+    <section class="chart-div">
+      <div class="chart-box">
+        <canvas id="my-chart"></canvas>
+        <div id="inner-chart" class="center"></div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <div id="correctDiv" class="center">
-        <div class="correct-content">
-          <!-- <h1>Correct</h1>
-        <strong><span id="perc-result">--.-</span>%</strong>
-        <h6 class="result-questions"><span id="span-result">n</span> / 10 questions</h6> -->
-        </div>
-      </div>
+    <section id="wrongDiv" class="center">
+      <div class="wrong-content"></div>
+    </section>
+  </main>
 
-      <div class="chart-div">
-        <div class="chart-box">
-          <canvas id="my-chart"> <!-- qui verrà creato il grafico --> </canvas>
-          <div id="inner-chart" class="center">
-            <!-- <p class="title-chart">Congratulations!</p>
-          <p class="blue">You passed the exam</p>
-          <br>
-          <p class="description-result">We'll send you the certificate <br>in few minutes. <br>Check you email (including <br>promotions / spam folder)</p> -->
-          </div>
-        </div>
-      </div>
+  <footer class="center">
+    <button onclick="rateUs()">RATE US</button>
+  </footer>
 
-      <div id="wrongDiv" class="center">
-        <div class="wrong-content">
-          <!-- <h1>Wrong</h1>
-        <strong><span id="perc-result">--.-</span>%</strong>
-        <h6 class="result-questions"><span id="span-result">n</span> / 10 questions</h6> -->
-        </div>
-      </div>
-    </main>
-
-    <footer class="center">
-      <button onclick="nextPage()">RATE US</button>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="assets/"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script src="assets/javaScript/result.js"></script>
+</body>
 </html>
