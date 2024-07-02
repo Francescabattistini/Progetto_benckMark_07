@@ -11,6 +11,8 @@ body {
   background-image: url(../img/bg.jpg);
   background-size: cover;
   color: white;
+  margin: 0, auto;
+  text-align: center;
 }
 
 .titolo {
