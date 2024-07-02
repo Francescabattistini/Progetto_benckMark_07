@@ -2,9 +2,7 @@
     box-sizing: border-box;
     margin: 0%;
     border: 0;
-    font-family: "Inter", sans-serif;
-
-
+    font-family: "Outfit", sans-serif;
 }
 
 body {
@@ -44,6 +42,7 @@ h2 {
 
 h2 {
     font-weight: 200;
+    
 }
 
 .title {
@@ -114,6 +113,9 @@ hr {
     border-bottom: magenta;
     border-style: double;
     color: white;
-    padding-left: 25px;
-    
+    padding-left: 25px; 
+}
+
+input:focus {
+    outline: none;
 }
