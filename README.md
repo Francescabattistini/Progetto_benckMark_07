@@ -1,5 +1,4 @@
 # Progetto_benckMark_07
-
 Introduzione
 L’obiettivo della prima settimana di build week è creare una copia dell’app Benchmark di Epicode.
 
@@ -19,7 +18,7 @@ La pagina HTML è progettata con le seguente caratteristiche:
 
 La struttura della Welcome page:
 
-1.	Index-welcome.html - rappresenta il file principale che definisce la struttura della pagina e include elementi blocco (&lth1&gt, &ltp&gt, &ltdiv&gt), elementi inline come &ltspan&gt, elementi lista &ltul&gt e i percorsi per collegarla con CSS, JavaScript e le altre pagine.
+1.	Index-welcome.html - rappresenta il file principale che definisce la struttura della pagina e include elementi blocco (&lt<h1>&gt, &ltp&gt, &ltdiv&gt), elementi inline come &ltspan&gt, elementi lista &ltul&gt e i percorsi per collegarla con CSS, JavaScript e le altre pagine.
 
 2.	Cartella assets – contiene le immagini, file CSS e JavaScript:
 -	img : immagini utilizzate come il logo Epicode e l’immagine di background.
