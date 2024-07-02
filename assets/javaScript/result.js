@@ -1,24 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-	// Array di domande per simulare un contesto di risposte corrette e scorrette
-	const questions = [
-	  { correct_answer: "Central Processing Unit" },
-	  { correct_answer: "Final" },
-	  { correct_answer: "False" },
-	  { correct_answer: "False" },
-	  { correct_answer: ".svg" },
-	  { correct_answer: "Cascading Style Sheet" },
-	  { correct_answer: "Nougat" },
-	  { correct_answer: "140" },
-	  { correct_answer: "False" },
-	  { correct_answer: "Java" },
-	];
-
-  
-	// Recupera il punteggio dell'utente dal localStorage
+		// Recupera il punteggio dell'utente dal localStorage
 	const userScore = 5;//localStorage.getItem('userScore') ? parseInt(localStorage.getItem('userScore')) : 0;
   
 	// Calcola il numero totale di domande
-	const totalQuestions = questions.length;
+	const totalQuestions = 10;//localstorage.getItem('totalQuestions') ? parseInt(localStorage.getItem('totalQuestions')) : 0;
   
 	// Calcola il numero di risposte corrette e scorrette
 	const correctAnswers = userScore;
