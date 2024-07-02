@@ -108,7 +108,8 @@ input[type="checkbox"]:checked::after {
 }
 .bottone:disabled{
     color: white;
-    background-color: grey;
-    box-shadow: none;
+    background-color: transparent;
+    border: 2px solid white;
+    box-shadow: 0px 0px 22px #3f246f; 
    }
 
