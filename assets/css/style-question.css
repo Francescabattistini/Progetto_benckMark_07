@@ -17,7 +17,6 @@ body {
 
 .container-main {
     width: 80%;
-    height: 100%;
 }
 
 .header-box {
@@ -49,7 +48,7 @@ body {
 }
 
 
-.title-box-question p {
+.title-box-question {
     color: white;
     font-size: 40px;
     font-weight: 300;
@@ -85,6 +84,7 @@ body {
 
 .body-box-footer {
     text-align: center;
+    padding: 40px;
 }
 
 .questions {
