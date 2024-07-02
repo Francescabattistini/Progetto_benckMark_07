@@ -39,7 +39,7 @@ body {
 .box-question {
     width: 100%;
     text-align: center;
-    height: 70vh;
+    height: 60vh;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -62,7 +62,9 @@ body {
 .body-box-row {
     display: flex;
     justify-content: center;
-    gap: 35px;
+    gap: 0 35px;
+    flex-wrap: wrap;
+
 }
 
 .button-answer {
@@ -76,6 +78,7 @@ body {
     transition: background 0.3s ease;
     box-shadow: -1px -1px 10px white;
     border: 2px solid transparent;
+
 }
 
 .button-answer:hover {

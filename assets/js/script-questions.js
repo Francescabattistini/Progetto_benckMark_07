@@ -99,13 +99,6 @@ const questions = [
 ];
 
 
-
-
-
-
-
-
-
 //---------- TO DO LIST ---------- 
 
 // 1. Randomizziamo le domande (OK)
@@ -120,7 +113,8 @@ const questions = [
 
 
 
-// Dichiarazione Variabili 
+// Dichiarazione Variabili
+
 const textQuestion = document.getElementById('titleBoxQuestion');
 const footerNumber = document.getElementById('footerNumber');
 let displayIndex = 0;
@@ -156,13 +150,10 @@ function randomize(array) {
 function displayQuestions(index) {
 
     textQuestion.innerText = questions[index].question;
-
     footerNumber.innerHTML = (index + 1) + '<span> / 10 </span>';
-
     const allAnswers = [];
 
     allAnswers.push(...questions[index].incorrect_answers, questions[index].correct_answer)
-
     randomize(allAnswers);
 
     const bodyBoxRow = document.getElementById('bodyBoxRow');
@@ -172,7 +163,6 @@ function displayQuestions(index) {
         btn.classList.add('button-answer');
         btn.innerText = allAnswers[i];
         bodyBoxRow.appendChild(btn);
-
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             if (allAnswers[i] === questions[index].correct_answer) {
