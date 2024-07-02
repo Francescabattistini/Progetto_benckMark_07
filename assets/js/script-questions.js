@@ -1,38 +1,3 @@
-// let timer = document.getElementById('seconds')
-
-// let timeLeft = 10;
-// function countdown() {
-//     if (timeLeft === 0) {
-//         console.log("Tempo scaduto!");
-//     } else {
-//         timer.innerText = `${timeLeft}`;
-//         timeLeft--;
-//         setTimeout(countdown, 1000);
-//     }
-// }
-
-// countdown();
-
-// Variabili //
-
-let counterCorrect = 0;
-let counterWrong = 0;
-let randomQuestion;
-let selectedAnswer;
-
-window.onload = function () {
-    init();
-}
-
-function init() {
-    pickRandomQuestion();
-    displayRandomQuestion();
-    let answerContainer = document.querySelectorAll('.button-answer');
-    answerContainer.forEach((button) => { button.addEventListener('click', () => handleAnswer(selectedAnswer, randomQuestion)) });
-
-}
-
-
 const questions = [
     {
         category: "Science: Computers",
@@ -133,47 +98,94 @@ const questions = [
     },
 ];
 
-let shownQuestionIndex = [];
-let availableIndex = [];
 
 
-function pickRandomQuestion() {
-    if (availableIndex.length === 0) {
-        for (i = 0; i < questions.length; i++) {
-            if (!shownQuestionIndex.includes(i)) {
-                availableIndex.push(i);
-            }
-        };
-    };
 
-    const randomIndex = availableIndex[Math.floor(Math.random() * questions.length)];
-    shownQuestionIndex.push(randomIndex);
-    availableIndex = availableIndex.filter(index => index !== randomIndex);
-    return questions[randomIndex];
+
+
+
+
+
+//---------- TO DO LIST ---------- 
+
+// 1. Randomizziamo le domande (OK)
+// 2. Creiamo il div dove si vedranno domande (OK)
+// 3. Visualizziamo le domande + indice (OK)
+// 4. Randomizziamo le risposte (OK)
+// 5. Creiamo i bottoni con il loro testo interno (OK)
+// 6. Gestione del click del bottone (OK)
+// 7. Creazione di due counter (uno per le risposte correte e uno per le risposte a cui abbiamo risposto) (OK)
+// 8. Creazione di due local storage per i counters (OK)
+// 9. Timer da libreria
+
+
+
+// Dichiarazione Variabili 
+const textQuestion = document.getElementById('titleBoxQuestion');
+const footerNumber = document.getElementById('footerNumber');
+let displayIndex = 0;
+let correctAnswer = 0;
+let numberOfQuestions = 10;
+
+
+window.onload = () => {
+    init()
+};
+
+function init() {
+    randomize(questions);
+    displayQuestions(displayIndex);
 };
 
 
-function displayRandomQuestion() {
-    const randomQuestion = pickRandomQuestion();
-    let questionContainer = document.getElementById('titleBoxQuestion')
-    let answerContainer = document.querySelectorAll('.button-answer')
+function randomize(array) {
 
-    questionContainer.innerText = `${randomQuestion.question}`;
+    let currentIndex = array.length - 1; //----- Mettiamo qui il (- 1) per far si che non vad ad intaccare il random 
+    let temporaryValue;
+    let randomIndex;
 
-    const allAnswers = [...randomQuestion.incorrect_answers];
-    const correctIndex = Math.floor(Math.random() * (allAnswers.length) + 1);
-    allAnswers.splice(correctIndex, 0, randomQuestion.correct_answer);
-
-    for (i = 0; i < allAnswers.length; i++) {
-        answerContainer[i].innerText = `${allAnswers[i]}`;
+    for (let i = currentIndex; i >= 0; i--) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
     }
+    return array;
 }
 
-function handleAnswer(selectedAnswer, randomQuestion) {
-    if (selectedAnswer === randomQuestion.correct_answer) {
-        counterCorrect++;
-    } else {
-        counterWrong++;
+function displayQuestions(index) {
+
+    textQuestion.innerText = questions[index].question;
+
+    footerNumber.innerHTML = (index + 1) + '<span> / 10 </span>';
+
+    const allAnswers = [];
+
+    allAnswers.push(...questions[index].incorrect_answers, questions[index].correct_answer)
+
+    randomize(allAnswers);
+
+    const bodyBoxRow = document.getElementById('bodyBoxRow');
+    bodyBoxRow.innerHTML = '';
+    for (i = 0; i < allAnswers.length; i++) {
+        const btn = document.createElement('button');
+        btn.classList.add('button-answer');
+        btn.innerText = allAnswers[i];
+        bodyBoxRow.appendChild(btn);
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (allAnswers[i] === questions[index].correct_answer) {
+                correctAnswer++;
+            }
+            displayIndex++;
+            if (displayIndex < numberOfQuestions) {
+                displayQuestions(displayIndex);
+            } else {
+                localStorage.setItem('userScore', correctAnswer);
+                localStorage.setItem('totalQuestions', numberOfQuestions);
+                window.location.href = '../Results.html';
+            }
+        })
     }
-    console.log(`Risposte corrette: ${counterCorrect}, Risposte sbagliate: ${counterWrong}`);
-};
+}
