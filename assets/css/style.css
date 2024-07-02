@@ -17,13 +17,14 @@ body{
     color: white;
     font-size: 1.2em;
 }
-.img-logo{
-    width: 19%;
-}
+/*HEADER************************************************/
 header{
     margin-bottom: 90px;
 }
-
+.img-logo{
+    width: 19%;
+}
+/*MAIN**************************************************/
 main h1{
     font-size: 6rem;
     line-height:0.9;
@@ -32,7 +33,7 @@ main h1{
 main h1 span{
 font-weight: normal;
 }
-
+/*INSTRUCTION*********************/
 .instructions{
   margin-top: 3rem; 
 }
@@ -43,6 +44,7 @@ font-weight: normal;
 .instructions_paragrafo{
     width: 70%;
 }
+/*LISTA*********************/
 .lista{
     margin-left: 2em;
     margin-top: 50px;
@@ -53,6 +55,7 @@ font-weight: normal;
 .lista li span{
     font-weight: bold;
 }
+/*INPUT CHECK*********************/
 .checkBox, .divBottone{
     display: inline-block;
 }
@@ -61,19 +64,14 @@ font-weight: normal;
     margin-top: 3em;
     margin-right: 15%;
 }
-.bottone{
-    font-size: 1.2em;
-    font-weight: bold;
-    padding: 18px 45px;
-    background-color: #00ffff;
-    border: none;
-    box-shadow: 0px 0px 22px #00ffff;    
+.inputButton{
+    margin-top: 60px;
 }
 input[type="checkbox"] {
     appearance: none; 
     width: 24px;
     height: 24px;
-    border: 3px solid white;
+    border: 2px solid white;
     outline: none;
     cursor: pointer;
     position: relative;
@@ -81,13 +79,11 @@ input[type="checkbox"] {
     vertical-align: middle; /* Allinea verticalmente con il testo */
     margin-right: 10px;
 }
-
 /* Stile quando il checkbox è selezionato */
 input[type="checkbox"]:checked {
     background-color: #cb2376;
     border-color: #cb2376;
 }
-
 /* Aggiunge il segno di spunta */
 input[type="checkbox"]:checked::after {
     content: '✓';
@@ -98,14 +94,21 @@ input[type="checkbox"]:checked::after {
     color: white;
     font-size: 14px;
 }
-.inputButton{
-    margin-top: 60px;
-}
 .checkBox label{
     font-weight: bold;
 }
-.bottone:disabled{
- color: white;
- background-color: grey;
- box-shadow: none;
+/*BUTTON*********************/
+.bottone{
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 18px 45px;
+    background-color: #00ffff;
+    border: none;
+    box-shadow: 0px 0px 22px #00ffff;    
 }
+.bottone:disabled{
+    color: white;
+    background-color: grey;
+    box-shadow: none;
+   }
+
