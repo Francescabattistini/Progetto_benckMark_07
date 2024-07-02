@@ -1,56 +1,64 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/Result.css" />
-    <title>Results</title>
+    <title>results-page</title>
   </head>
 
   <body>
     <header>
-      <div class="logo">
-        <img src="assets/img/epicode_logo.png" alt="logo" />
+      <nav class="logo">
+        <a href="https:/www.epicode.com/it/" title="epicode" target="_blank">
+          <img
+            src="assets/img/epicode_logo.png"
+            alt="epicode-logo"
+            width="150px"
+          />
+        </a>
+      </nav>
+      <div class="title center">
+        <h1>Results</h1>
+        <h3>The summary of your answers:</h3>
       </div>
     </header>
+
     <main>
-      <div class="titolo">
-        <h1 class="titolo">Results</h1>
-        <h4 class="sottotitolo">The summary of your answers:</h4>
-      </div>
-    </main>
-    <section>
-      <div id="correctDiv">
+      <div id="correctDiv" class="center">
         <div class="correct-content">
-          <!-- <h2> Correct </h2>
-       <storg> <span id=" percentualeTrue">--.-</span> % </strong>
-        <h5 class="correctCount"><span id="span-result">n</span> /10 </h5> -->
+          <!-- <h1>Correct</h1>
+        <strong><span id="perc-result">--.-</span>%</strong>
+        <h6 class="result-questions"><span id="span-result">n</span> / 10 questions</h6> -->
         </div>
       </div>
 
-      <div class="cerchio-div">
-        <div class="cerchio-box">
-          <canvas id="mydoughnut"> <!-- qui ci mettiamo il grafico --></canvas>
-          <div id="inner-doughnut">
-            <!-- You are Loser!!!-->
-            <!-- <p> Congratulation !!!</p> 
-             <p> You don't pass the exam</p>
- <p> You passed the exam </p> -->
+      <div class="chart-div">
+        <div class="chart-box">
+          <canvas id="my-chart"> <!-- qui verrà creato il grafico --> </canvas>
+          <div id="inner-chart" class="center">
+            <!-- <p class="title-chart">Congratulations!</p>
+          <p class="blue">You passed the exam</p>
+          <br>
+          <p class="description-result">We'll send you the certificate <br>in few minutes. <br>Check you email (including <br>promotions / spam folder)</p> -->
           </div>
         </div>
       </div>
 
-      <div id="wrongDiv">
-        <div class="wrog-content">
-          <!-- <h2> Wrong </h2>
-             <storg> <span id=" percentualefalse">--.-</span> % </strong>
-              <h5 class="wrongCount"><span id="span-result">n</span> /10 </h5> -->
+      <div id="wrongDiv" class="center">
+        <div class="wrong-content">
+          <!-- <h1>Wrong</h1>
+        <strong><span id="perc-result">--.-</span>%</strong>
+        <h6 class="result-questions"><span id="span-result">n</span> / 10 questions</h6> -->
         </div>
       </div>
-    </section>
+    </main>
 
-    <footer><button onclick="nextPage()">RATE US</button></footer>
-    <script src="assets/javaScript/result.js"></script>
+    <footer class="center">
+      <button onclick="nextPage()">RATE US</button>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/"></script>
   </body>
 </html>
