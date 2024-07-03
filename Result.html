@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/Result.css" />
+    <title>results-page</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="logo">
+        <img
+          src="assets/img/epicode_logo.png"
+          alt="epicode-logo"
+          width="150px"
+        />
+      </nav>
+      <div class="title">
+        <h1>Results</h1>
+        <h3>The summary of your answers:</h3>
+      </div>
+    </header>
+
+    <main>
+      <section id="correctDiv" class="center">
+        <div class="correct-content"></div>
+      </section>
+
+      <section class="chart-div">
+        <div class="chart-box">
+          <canvas id="my-chart"></canvas>
+          <div id="inner-chart" class="center"></div>
+        </div>
+      </section>
+
+      <section id="wrongDiv" class="center">
+        <div class="wrong-content"></div>
+      </section>
+    </main>
+
+    <footer class="center">
+      <button onclick="rateUs()">RATE US</button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+    <script src="assets/javaScript/result.js"></script>
+  </body>
+</html>
