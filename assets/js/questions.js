@@ -177,7 +177,7 @@ function displayQuestions(index) {
             } else {
                 localStorage.setItem('userScore', correctAnswer);
                 localStorage.setItem('totalQuestions', numberOfQuestions);
-                window.location.href = '../Results.html';
+                window.location.href = 'result.html';
             }
         })
     }

@@ -10,7 +10,7 @@ function init() {
 window.addEventListener('pageshow', init);  //evento quando la pagina si ricarica
 
 function cambiaPagina() {      // Cambia l'URL della pagina
-    window.location.href = 'https://www.google.com/';
+    window.location.href = 'questions.html';
   }
 
 

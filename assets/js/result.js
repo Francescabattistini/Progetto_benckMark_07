@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 		// Recupera il punteggio dell'utente dal localStorage
-	const userScore = 5;//localStorage.getItem('userScore') ? parseInt(localStorage.getItem('userScore')) : 0;
-  
+	const userScore = localStorage.getItem('userScore') ? parseInt(localStorage.getItem('userScore')) : 0;
+  console.log(userScore);
 	// Calcola il numero totale di domande
-	const totalQuestions = 10;//localstorage.getItem('totalQuestions') ? parseInt(localStorage.getItem('totalQuestions')) : 0;
+	const totalQuestions = localStorage.getItem('totalQuestions') ? parseInt(localStorage.getItem('totalQuestions')) : 0;
+	console.log(totalQuestions);
   
 	// Calcola il numero di risposte corrette e scorrette
 	const correctAnswers = userScore;
