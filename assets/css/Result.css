@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.logo {
+
+  text-align: left; /* Mantieni il logo a sinistra */
+  display: inline-block; /* Rendi il logo un elemento inline-block */
+  vertical-align: middle; /* Allinea verticalmente */
+}
+
+
+.title {
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+#correctDiv,
+#wrongDiv {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.chart-div {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+
+.chart-box {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  
+}
+
+#my-chart {
+  width: 100%;
+  height: 100%;
+}
+
+#inner-chart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+footer {
+  clear: both;
+  padding: 20px;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 40px;
+  font-weight: 700;
+}
