@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
-		// Recupera il punteggio dell'utente dal localStorage
-	const userScore = localStorage.getItem('userScore') ? parseInt(localStorage.getItem('userScore')) : 0;
-  console.log(userScore);
+	// Recupera il punteggio dell'utente dal localStorage
+	const userScore = localStorage.getItem('userScore') ? localStorage.getItem('userScore') : 0;
+  	console.log(userScore);
+  
 	// Calcola il numero totale di domande
 	const totalQuestions = localStorage.getItem('totalQuestions') ? parseInt(localStorage.getItem('totalQuestions')) : 0;
 	console.log(totalQuestions);
@@ -19,6 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		history.go(1);
 	};
 
+	if(userScore === "false") {
+		const par = document.getElementById('cheater')
+		par.innerText = "ti ho fregato";
+		const chartBox = document.getElementById("chart-box")
+		chartBox.style.height = "0px";
+		const myChart = document.getElementById("my-chart") //questi non vanno
+		myChart.style.height = "0px";
+		const canvas = document.querySelector('canvas')
+		canvas.remove();
+
+	} else {
 	// Aggiorna il contenuto del div delle risposte corrette
 	document.querySelector('#correctDiv .correct-content').innerHTML = `
 	  <h1>Correct</h1>
@@ -67,10 +78,12 @@ document.addEventListener('DOMContentLoaded', function() {
 	  <p class="${passFailText === 'Pass' ? 'blue' : 'red'}">${passFailText === 'Pass' ? 'You passed the exam' : 'You did not pass the exam'}</p>
 	  ${passFailText === 'Pass' ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder)</p>' : ''}
 	`;
-  
+}
+
+
 	// Aggiunge un event listener per il pulsante "RATE US" per reindirizzare alla pagina di feedback
 	document.querySelector('footer button').addEventListener('click', function() {
 	  window.location.href = 'feedback.html';
 	});
-  });
+
   
