@@ -24,7 +24,7 @@
 		par.innerText = "ti ho fregato";
 		const chartBox = document.getElementById("chart-box")
 		chartBox.style.height = "0px";
-		const myChart = document.getElementById("my-chart") //questi non vanno
+		const myChart = document.getElementById("my-chart") //questi
 		myChart.style.height = "0px";
 		const canvas = document.querySelector('canvas')
 		canvas.remove();

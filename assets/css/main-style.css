@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap");
+
+* {
+  margin: 0, auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+#body_welcome {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 10%;
+  padding-right: 8%;
+  padding-top: 3%;
+  color: white;
+  font-size: 1.2em;
+}
+/*HEADER************************************************/
+#header_welcome {
+  margin-bottom: 2em;
+  text-align: left;
+  padding: 0 0 1em 0;
+}
+.img-logo {
+  width: 18%;
+}
+/*MAIN**************************************************/
+.main_welcome h1 {
+  font-size: 6rem;
+  line-height: 0.9;
+  font-weight: 800;
+}
+.main_welcome h1 span {
+  font-weight: normal;
+}
+/*INSTRUCTION*********************/
+.instructions {
+  margin-top: 3rem;
+}
+.instructions h2 {
+  color: #c2128d;
+
+  font-weight: 900;
+  margin-bottom: -0.1em;
+}
+.instructions_paragrafo {
+  width: 70%;
+}
+/*LISTA*********************/
+.lista {
+  margin-left: 2em;
+  margin-top: 2em;
+}
+.lista li {
+  line-height: 1.6;
+}
+.lista li span {
+  font-weight: bold;
+}
+/*INPUT CHECK*********************/
+.checkBox,
+.divBottone {
+  display: inline-block;
+}
+.checkBox {
+  margin-left: 0.5em;
+  margin-top: 3em;
+  margin-right: 15%;
+}
+.inputButton {
+  margin-top: 60px;
+}
+input[type="checkbox"] {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border: 2px solid white;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s, border-color 0.3s;
+  vertical-align: middle; /* Allinea verticalmente con il testo */
+  margin-right: 10px;
+}
+/* Stile quando il checkbox è selezionato */
+input[type="checkbox"]:checked {
+  background-color: #cb2376;
+  border-color: #cb2376;
+}
+/* Aggiunge il segno di spunta */
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 14px;
+}
+.checkBox label {
+  font-weight: bold;
+}
+/*BUTTON*********************/
+.bottone {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 18px 45px;
+  background-color: #00ffff;
+  border: none;
+  box-shadow: 0px 0px 22px #00ffff;
+}
+.bottone:disabled {
+  color: white;
+  background-color: transparent;
+  border: 2px solid white;
+  box-shadow: 0px 0px 22px #3f246f;
+}
+
+/* //////////////////////////// QUESTION/////////////////////////////////////// */
+#body_questions {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.non-selezionabile {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container-main {
+  width: 80%;
+}
+.header_question {
+  padding: 0;
+}
+.header-box {
+  width: 100%;
+  height: 20%;
+  margin-top: 0.3em;
+  padding-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo-box {
+  width: 19%;
+}
+
+.header-box .logo-box img {
+  width: 100%;
+}
+
+.box-question {
+  width: 100%;
+  text-align: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title-box-question {
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.title-box-question p span {
+  font-weight: bold;
+}
+.body-box-row {
+  display: flex;
+  justify-content: center;
+  gap: 0 35px;
+  flex-wrap: wrap;
+}
+
+.button-answer {
+  padding: 20px;
+  background-color: #24294f;
+  color: white;
+  margin-top: 30px;
+  cursor: pointer;
+  width: 43%;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+  box-shadow: -1px -1px 10px white;
+  border: 2px solid transparent;
+}
+
+.button-answer:hover {
+  background: linear-gradient(
+    176deg,
+    rgba(210, 0, 148, 1) 31%,
+    rgba(144, 0, 128, 1) 70%
+  );
+}
+
+.body-box-footer {
+  text-align: center;
+  padding: 40px;
+}
+
+.questions {
+  color: white;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+
+.questions span {
+  color: #b51289;
+}
+.footerquestion :first-of-type span {
+  color: white;
+}
+.grapich-timer {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+#timerElement {
+  color: white;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-timer {
+  font-size: 12px;
+  text-align: center;
+}
+
+.text-timer span {
+  font-size: 8px;
+}
+#footer_questions {
+  padding: 1em 0 0;
+}
+#seconds {
+  font-size: 2rem;
+}
+/* ////////////////////////////////////////////////// RESULT/////////////////////////////////////////////// */
+#body_result {
+  background-image: url(../img/bg.jpg);
+  background-size: cover;
+  color: white;
+  margin: 0;
+  text-align: center;
+}
+
+header {
+  width: 100%;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+
+.logo {
+  text-align: left; /* Mantieni il logo a sinistra */
+  display: inline-block; /* Rendi il logo un elemento inline-block */
+  vertical-align: middle; /* Allinea verticalmente */
+}
+
+.title {
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  position: relative;
+  margin-top: 20px;
+}
+
+#correctDiv,
+#wrongDiv {
+  width: 25%;
+  float: left;
+  text-align: center;
+}
+
+.chart-div {
+  width: 50%;
+  float: left;
+  position: relative;
+}
+
+.chart-box {
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#my-chart {
+  width: 100%;
+  height: 100%;
+}
+
+#inner-chart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+footer {
+  clear: both;
+  padding: 20px;
+}
+
+button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 10px 40px;
+  font-weight: 700;
+}
+
+/* ////////////////////////////////////// FEEDBACK///////////////////////////////////////////////////////////// */
+
+#body_feedback {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.epicode_logo {
+  margin-top: 50px;
+  margin-bottom: 130px;
+}
+
+.main-container {
+  width: 80%;
+}
+.body-container {
+  text-align: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.logo {
+  width: 19%;
+}
+
+h1,
+h2 {
+  color: white;
+}
+
+h2 {
+  font-weight: 200;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+.subtitle {
+  margin-bottom: 40px;
+}
+
+.star-container {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+}
+.feedbackStars {
+  display: flex;
+  justify-content: space-around;
+  width: 64%;
+}
+.button {
+  padding: 14px 40px;
+  color: rgb(0, 12, 82);
+  font-weight: bold;
+  font-size: larger;
+  border-radius: 5px;
+  background-color: #00ffff;
+}
+
+.button:hover {
+  box-shadow: 0px -1px 14px 1px #00ffff;
+}
+
+hr {
+  height: 2px;
+  background-color: rgb(255, 0, 200);
+  border: none;
+  width: 70%;
+  margin: auto;
+}
+
+.disable-star {
+  filter: opacity(0.2);
+
+  &.enabled {
+    filter: opacity(1);
+  }
+}
+.h2-feedback {
+  margin-bottom: 35px;
+}
+.textarea {
+  margin-bottom: 40px;
+}
+
+#commentHere {
+  width: 80%;
+  height: 35px;
+  background-color: transparent;
+  border-bottom: magenta;
+  border-style: double;
+  color: white;
+  padding-left: 25px;
+}
+
+input:focus {
+  outline: none;
+}
