@@ -36,3 +36,7 @@ const checkStar = (starId) => {
         }
     }
 };
+
+function cambiaPagina() {      // Cambia l'URL della pagina
+    window.location.href = 'https://epicode.com/it/candidati/';
+  }
