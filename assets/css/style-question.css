@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    border: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.non-selezionabile {
+    -webkit-user-select: none;
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none;          
+}
+
+.container-main {
+    width: 80%;
+}
+
+.header-box {
+    width: 100%;
+    height: 20%;
+    padding-top: 39px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-box {
+    width: 19%;
+}
+
+.header-box .logo-box img {
+    width: 100%;
+
+}
+
+.box-question {
+    width: 100%;
+    text-align: center;
+    height: 60vh;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+
+.title-box-question {
+    color: white;
+    font-size: 40px;
+    font-weight: 300;
+    margin-bottom: 35px;
+}
+
+.title-box-question p span {
+    font-weight: bold;
+}
+
+.body-box-row {
+    display: flex;
+    justify-content: center;
+    gap: 0 35px;
+    flex-wrap: wrap;
+
+}
+
+.button-answer {
+    padding: 20px;
+    background-color: #24294F;
+    color: white;
+    margin-top: 30px;
+    cursor: pointer;
+    width: 43%;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+    box-shadow: -1px -1px 10px white;
+    border: 2px solid transparent;
+
+}
+
+.button-answer:hover {
+    background: linear-gradient(176deg, rgba(210, 0, 148, 1) 31%, rgba(144, 0, 128, 1) 70%);
+}
+
+.body-box-footer {
+    text-align: center;
+    padding: 40px;
+}
+
+.questions {
+    color: white;
+    letter-spacing: 3px;
+    font-weight: 400;
+}
+
+.questions span {
+    color: #B51289;
+}
+
+.grapich-timer {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#timerElement {
+    color: white;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-timer {
+    font-size: 12px;
+    text-align: center;
+}
+
+.text-timer span {
+    font-size: 8px;
+}
+
+#seconds {
+    font-size: 2rem;
+}
