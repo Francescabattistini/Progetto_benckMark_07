@@ -129,6 +129,11 @@ window.onload = () => {
     init()
 };
 
+history.pushState(null, null, location.href);
+window.onpopstate = function () {
+    history.go(1);
+};
+
 function init() {
     randomize(questions);
     displayQuestions(displayIndex);

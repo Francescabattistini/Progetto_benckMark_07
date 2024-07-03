@@ -14,6 +14,11 @@ document.addEventListener('DOMContentLoaded', function() {
 	const correctPercent =((correctAnswers / totalQuestions) * 100);
 	const incorrectPercent = 100 - correctPercent;
   
+	history.pushState(null, null, location.href);
+	window.onpopstate = function () {
+		history.go(1);
+	};
+
 	// Aggiorna il contenuto del div delle risposte corrette
 	document.querySelector('#correctDiv .correct-content').innerHTML = `
 	  <h1>Correct</h1>
