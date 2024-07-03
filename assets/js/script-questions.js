@@ -16,7 +16,7 @@ const questions = [
         type: "multiple",
         difficulty: "easy",
         question:
-            "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn&#039;t get modified?",
+            "In the programming language Java, which of these keywords would you put on a variable to make sure it doesn't get modified?",
         correct_answer: "Final",
         incorrect_answers: ["Static", "Private", "Public"],
     },
@@ -121,6 +121,9 @@ let displayIndex = 0;
 let correctAnswer = 0;
 let numberOfQuestions = 10;
 
+window.addEventListener('blur', function () {
+    alert('Hai lasciato la pagina!');
+});
 
 window.onload = () => {
     init()

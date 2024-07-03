@@ -13,6 +13,14 @@ body {
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
+
+}
+
+.non-selezionabile {
+    -webkit-user-select: none;
+    -moz-user-select: none;    
+    -ms-user-select: none;     
+    user-select: none;          
 }
 
 .container-main {
@@ -31,6 +39,7 @@ body {
 .logo-box {
     width: 19%;
 }
+
 .header-box .logo-box img {
     width: 100%;
 
