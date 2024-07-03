@@ -19,6 +19,8 @@
                 <div class="logo-box">
                     <img src="assets/img/epicode_logo.png" alt="">
                 </div>
+
+<!-- 
                 <div class="grapich-timer">
                     <div id="timerElement">
                         <div class="text-timer">
@@ -27,7 +29,36 @@
                             <span> REMAINING</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
+
+
+
+
+                <div class="progress-ring">
+                    <div class="progress-time">
+                      <span id="time"><p id="seconds"></p></span>
+                    </div>
+                    <svg width="160" height="160">
+                      <defs>
+                        <!-- Filtro per ombra esterna -->
+                        <filter id="outer-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                          <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#000000" flood-opacity="0.5"/>
+                        </filter>
+                        <!-- Filtro per ombra interna -->
+                        <filter id="inner-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                          <feDropShadow dx="0" dy="0" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
+                        </filter>
+                      </defs>
+                      <!-- Cerchio di sfondo con ombra esterna -->
+                      <circle class="progress-ring__background" stroke="#95689b" stroke-width="18" fill="transparent" r="60" cx="80" cy="80" filter="url(#outer-shadow)" />
+                      <!-- Cerchio di progresso con ombra interna -->
+                      <circle class="progress-ring__circle" stroke="#00ffff" stroke-width="18" fill="transparent" r="60" cx="80" cy="80" filter="url(#inner-shadow)" />
+                    </svg>
+                  </div>
+
+
+
+
             </div>
         </header>
         <main>

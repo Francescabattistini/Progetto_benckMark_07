@@ -121,7 +121,8 @@ const seconds = document.getElementById('seconds');
 let displayIndex = 0;
 let correctAnswer = 0;
 let numberOfQuestions = 10;
-let timer;    //variabile per lo scorrere del tempo
+let timer;   //variabile per lo scorrere del tempo
+
 
 // window.addEventListener('blur', function () {
 //     alert('Hai lasciato la pagina!');
@@ -143,11 +144,9 @@ function init() {
 
 
 function randomize(array) {
-
     let currentIndex = array.length - 1; //----- Mettiamo qui il (- 1) per far si che non vad ad intaccare il random 
     let temporaryValue;
     let randomIndex;
-
     for (let i = currentIndex; i >= 0; i--) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         temporaryValue = array[currentIndex];
@@ -157,8 +156,8 @@ function randomize(array) {
     return array;
 }
 
+//***************************************************************************************************** */
 function displayQuestions(index) {
-
     textQuestion.innerText = questions[index].question;
     footerNumber.innerHTML = (index + 1) + '<span> / 10 </span>';
     const allAnswers = [];
@@ -173,9 +172,10 @@ function displayQuestions(index) {
         btn.classList.add('button-answer');
         btn.innerText = allAnswers[i];
         bodyBoxRow.appendChild(btn);
+
         btn.addEventListener('click', (e) => {
             e.preventDefault();
-            clearInterval(timer); 
+            clearInterval(timer);
             if (allAnswers[i] === questions[index].correct_answer) {
                 correctAnswer++;
             }
@@ -189,23 +189,36 @@ function displayQuestions(index) {
             }
         })
     }
-
-    
-    startTimer(differentTiming(questions[index]));
+    circleProgress(differentTiming(questions[index]))
 }
 
 
-function startTimer(duration) {
-    let timeLeft = duration; // tempo dinamico in base al valore questions.duration
-    seconds.innerText = timeLeft;
+//***************************************************************************************************** */
+function circleProgress(duration) {
+    const totalTime = duration; // Tempo totale in secondi
+    let remainingTime = totalTime;  //è il tempo che va scendere, quindi che viene aggiornato
 
-    timer = setInterval(() => {  //utilizziamo questa funzione per attivarla una volta a secondo
-        timeLeft--;   //meno uno
-        seconds.innerText = timeLeft;   //aggiorna
-        
-        if (timeLeft <= 0) {    //controllo se il tempo va sotto a zero
-            clearInterval(timer);   //
-            displayIndex++;   //aggiorna l'index per passare alla domanda successiva
+    const circle = document.querySelector('.progress-ring__circle');
+    const radius = circle.r.baseVal.value;  //per lo stile del cerchio
+    const circumference = 2 * Math.PI * radius;
+    const updateInterval = 100; // Aggiorna ogni 100 millisecondi
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
+    circle.style.strokeDashoffset = circumference; // Inizia pieno
+
+    // Funzione per aggiornare il timer e il cerchio di progresso con animazione
+    function updateTimer() {
+        remainingTime -= updateInterval / 1000;
+        seconds.textContent = Math.ceil(remainingTime);
+
+        // Applichiamo un'animazione fluida all'offset del cerchio di progresso
+        const progress = circumference * (remainingTime / totalTime);
+        circle.style.transition = 'stroke-dashoffset 0.1s linear';
+        circle.style.strokeDashoffset = circumference - progress; // Invertiamo l'offset
+
+        // controllo
+        if (remainingTime <= 0) {
+            clearInterval(timer);
+            displayIndex++;
             if (displayIndex < numberOfQuestions) {  //controllo se è finito l'array di oggetti
                 displayQuestions(displayIndex);  //avvia la funzione di sopra show, quindi compare una nuova domanda
             } else {
@@ -214,12 +227,15 @@ function startTimer(duration) {
                 window.location.href = 'result.html';
             }
         }
-    }, 1000); // Aggiorna ogni secondo
+    }
+    // Chiamiamo la funzione ogni 100 millisecondi
+    timer = setInterval(updateTimer, updateInterval);
 }
 
 
-function  differentTiming(array) {
-    if(array.difficulty === "easy" && array.type === "boolean") {
+
+function differentTiming(array) {
+    if (array.difficulty === "easy" && array.type === "boolean") {
         return 20;
     } else if (array.difficulty === "easy" && array.type === "multiple") {
         return 30;
