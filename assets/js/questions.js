@@ -122,11 +122,17 @@ let displayIndex = 0;
 let correctAnswer = 0;
 let numberOfQuestions = 10;
 let timer;   //variabile per lo scorrere del tempo
+let strike = 0;
 
 
-// window.addEventListener('blur', function () {
-//     alert('Hai lasciato la pagina!');
-// });
+ window.addEventListener('blur', function () {
+   strike ++;
+   if(strike >= 3) {
+    localStorage.setItem('userScore', false);
+    localStorage.setItem('totalQuestions', numberOfQuestions);
+    window.location.href = 'result.html';
+   }
+ });
 
 window.onload = () => {
     init()
