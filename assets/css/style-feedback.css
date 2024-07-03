@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    border: 0;
+    font-family: "Outfit", sans-serif;
+}
+
+body {
+    background-image: url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.epicode_logo {
+    margin-top: 50px;
+    margin-bottom: 130px;
+}
+
+.main-container {
+    width: 80%;
+}
+.body-container {
+    text-align: center;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 19%;
+
+
+}
+
+h1,
+h2 {
+    color: white;
+}
+
+h2 {
+    font-weight: 200;
+    
+}
+
+.title {
+    font-size: 2em;
+    margin-bottom: 30px;
+
+}
+.subtitle {
+    margin-bottom: 40px;
+}
+
+
+.star-container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.feedbackStars {
+    display: flex;
+    justify-content: space-around;
+    width: 64%;
+
+}
+.button {
+    padding: 14px 40px;
+    color: rgb(0, 12, 82);
+    font-weight: bold;
+    font-size: larger;
+    border-radius: 5px;
+    background-color: #00FFFF;
+
+}
+
+.button:hover {
+    box-shadow: 0px -1px 14px 1px #00FFFF;
+}
+
+
+
+hr {
+    height: 2px;
+    background-color: rgb(255, 0, 200);
+    border: none;
+    width: 70%;
+    margin: auto
+}
+
+.disable-star {
+    filter: opacity(0.2);
+
+    &.enabled {
+        filter: opacity(1);
+    }
+}
+.h2-feedback {
+    margin-bottom: 35px;
+}
+.textarea {
+    margin-bottom: 40px;
+}
+
+
+
+#commentHere {
+    width: 80%;
+    height: 35px;
+    background-color: transparent;
+    border-bottom: magenta;
+    border-style: double;
+    color: white;
+    padding-left: 25px; 
+}
+
+input:focus {
+    outline: none;
+}
