@@ -121,9 +121,9 @@ let displayIndex = 0;
 let correctAnswer = 0;
 let numberOfQuestions = 10;
 
-window.addEventListener('blur', function () {
-    alert('Hai lasciato la pagina!');
-});
+// window.addEventListener('blur', function () {
+//     alert('Hai lasciato la pagina!');
+// });
 
 window.onload = () => {
     init()
