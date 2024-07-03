@@ -161,7 +161,7 @@ function displayQuestions(index) {
 
     const bodyBoxRow = document.getElementById('bodyBoxRow');
     bodyBoxRow.innerHTML = '';
-    for (i = 0; i < allAnswers.length; i++) {
+    for (let i = 0; i < allAnswers.length; i++) {
         const btn = document.createElement('button');
         btn.classList.add('button-answer');
         btn.innerText = allAnswers[i];
