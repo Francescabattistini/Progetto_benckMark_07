@@ -18,16 +18,21 @@ header {
   width: 100%;
   padding: 20px;
   position: relative;
+  text-align: center;
 }
 
 .logo {
-  float: left;
-  padding: 10px 30px
+
+  text-align: left; /* Mantieni il logo a sinistra */
+  display: inline-block; /* Rendi il logo un elemento inline-block */
+  vertical-align: middle; /* Allinea verticalmente */
 }
 
+
 .title {
-  margin: 10px 0 auto;
-  display: inline-block;
+  margin: 10px auto;
+  display: block;
+  text-align: center;
 }
 
 main {
@@ -47,7 +52,6 @@ main {
   width: 50%;
   float: left;
   position: relative;
-  
 }
 
 .chart-box {
@@ -55,13 +59,12 @@ main {
   height: 300px;
   margin: 0 auto;
   position: relative;
- 
+  
 }
 
 #my-chart {
   width: 100%;
   height: 100%;
-  
 }
 
 #inner-chart {
