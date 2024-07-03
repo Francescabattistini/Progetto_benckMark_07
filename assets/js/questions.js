@@ -117,9 +117,11 @@ const questions = [
 
 const textQuestion = document.getElementById('titleBoxQuestion');
 const footerNumber = document.getElementById('footerNumber');
+const seconds = document.getElementById('seconds');
 let displayIndex = 0;
 let correctAnswer = 0;
 let numberOfQuestions = 10;
+let timer;    //variabile per lo scorrere del tempo
 
 // window.addEventListener('blur', function () {
 //     alert('Hai lasciato la pagina!');
@@ -173,6 +175,7 @@ function displayQuestions(index) {
         bodyBoxRow.appendChild(btn);
         btn.addEventListener('click', (e) => {
             e.preventDefault();
+            clearInterval(timer); 
             if (allAnswers[i] === questions[index].correct_answer) {
                 correctAnswer++;
             }
@@ -185,5 +188,50 @@ function displayQuestions(index) {
                 window.location.href = 'result.html';
             }
         })
+    }
+
+    
+    startTimer(differentTiming(questions[index]));
+}
+
+
+function startTimer(duration) {
+    let timeLeft = duration; // tempo dinamico in base al valore questions.duration
+    seconds.innerText = timeLeft;
+
+    timer = setInterval(() => {  //utilizziamo questa funzione per attivarla una volta a secondo
+        timeLeft--;   //meno uno
+        seconds.innerText = timeLeft;   //aggiorna
+        
+        if (timeLeft <= 0) {    //controllo se il tempo va sotto a zero
+            clearInterval(timer);   //
+            displayIndex++;   //aggiorna l'index per passare alla domanda successiva
+            if (displayIndex < numberOfQuestions) {  //controllo se è finito l'array di oggetti
+                displayQuestions(displayIndex);  //avvia la funzione di sopra show, quindi compare una nuova domanda
+            } else {
+                localStorage.setItem('userScore', correctAnswer);
+                localStorage.setItem('totalQuestions', numberOfQuestions);
+                window.location.href = 'result.html';
+            }
+        }
+    }, 1000); // Aggiorna ogni secondo
+}
+
+
+function  differentTiming(array) {
+    if(array.difficulty === "easy" && array.type === "boolean") {
+        return 20;
+    } else if (array.difficulty === "easy" && array.type === "multiple") {
+        return 30;
+    } else if (array.difficulty === "medium" && array.type === "boolean") {
+        return 30;
+    } else if (array.difficulty === "medium" && array.type === "multiple") {
+        return 60;
+    } else if (array.difficulty === "hard" && array.type === "boolean") {
+        return 40;
+    } else if (array.difficulty === "hard" && array.type === "multiple") {
+        return 120;
+    } else {
+        return 60;
     }
 }
