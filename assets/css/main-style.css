@@ -261,8 +261,15 @@ input[type="checkbox"]:checked::after {
   margin: 0;
   text-align: center;
 }
-
-header {
+#header_welcome {
+  margin-bottom: 2em;
+  text-align: left;
+  padding: 0 0 1em 0;
+}
+.img-logo {
+  width: 18%;
+}
+#header_Result {
   width: 100%;
   padding: 20px;
   position: relative;
@@ -281,7 +288,7 @@ header {
   text-align: center;
 }
 
-main {
+#main-result {
   width: 100%;
   position: relative;
   margin-top: 20px;
@@ -324,13 +331,19 @@ footer {
   clear: both;
   padding: 20px;
 }
-
-button {
-  background-color: transparent;
+.button {
   color: white;
-  border: 1px solid white;
-  padding: 10px 40px;
-  font-weight: 700;
+  background-color: transparent;
+  border: 2px solid white;
+}
+
+.button:hover {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 18px 45px;
+  background-color: #00ffff;
+  border: none;
+  box-shadow: 0px 0px 22px #00ffff;
 }
 
 /* ////////////////////////////////////// FEEDBACK///////////////////////////////////////////////////////////// */
@@ -363,7 +376,7 @@ button {
   width: 19%;
 }
 
-h1,
+/* h1,
 h2 {
   color: white;
 }
@@ -371,7 +384,7 @@ h2 {
 h2 {
   font-weight: 200;
 }
-
+ */
 .title {
   font-size: 2em;
   margin-bottom: 30px;
