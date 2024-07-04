@@ -535,6 +535,20 @@ button {
   box-shadow: 0px 0px 22px #00ffff;
 }
 
+.correctAnswer{
+  color: green;
+}
+
+.selectedAnswers{
+  color: red;
+}
+
+.questionContainer{
+  margin-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid #00ffff;
+}
+
 /* ////////////////////////////////////// FEEDBACK///////////////////////////////////////////////////////////// */
 
 #body_feedback {

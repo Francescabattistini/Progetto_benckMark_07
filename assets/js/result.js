@@ -10,9 +10,10 @@ var options = {   //opzioni per il chart
 };
 
 const jsonString = localStorage.getItem('request'); 
+let request;
 if (jsonString) {
   // Convertire la stringa JSON in un array di oggetti
-  const request = JSON.parse(jsonString);
+   request = JSON.parse(jsonString);
   console.log(request);
 } else {
   console.log('No data found in local storage.');
@@ -110,6 +111,40 @@ if (userScore === "false") {
       : '<p style="font-size: 100px;">😢</p>'
     }
 	`;
+
+
+//*********************************************************************************+ */
+const divRequest = document.getElementById("divRequest");
+
+for (let i = 0; i < request.length; i++) {
+    // Creare un nuovo div per la domanda e le risposte
+    const questionDiv = document.createElement("div");
+    questionDiv.classList.add("questionContainer");
+
+    questionDiv.innerHTML += `
+        <h2>${request[i].question}</h2>
+    `;
+
+    request[i].answers.forEach((answer) => {
+        if (answer === request[i].correctAnswer) {
+            questionDiv.innerHTML += `
+                <p class="correctAnswer">${answer}</p>
+            `;
+        } else if (answer === request[i].selectAnswer) {
+            questionDiv.innerHTML += `
+                <p class="selectedAnswers">${answer}</p>
+            `;
+        } else {
+            questionDiv.innerHTML += `
+                <p>${answer}</p>
+            `;
+        }
+    });
+
+    // Aggiungere il div della domanda al div principale
+    divRequest.appendChild(questionDiv);
+}
+
 }
 
 // Aggiunge un event listener per il pulsante "RATE US" per reindirizzare alla pagina di feedback
