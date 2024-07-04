@@ -1,15 +1,7 @@
 var options = {   //opzioni per il chart
   plugins: {
-      tooltip: {
-          enabled: true
-      },
       legend: {
           display: false
-      }
-  },
-  elements: {
-      arc: {
-          borderWidth: 0 // Rimuove i bordi degli archi
       }
   },
   cutout: "70%", 
