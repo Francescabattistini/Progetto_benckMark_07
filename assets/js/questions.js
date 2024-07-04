@@ -142,6 +142,7 @@ function init() {
 
 function randomize(array) {
   let currentIndex = array.length - 1; //----- Mettiamo qui il (- 1) per far si che non vad ad intaccare il random
+  console.log(currentIndex);
   let temporaryValue;
   let randomIndex;
   for (let i = currentIndex; i >= 0; i--) {

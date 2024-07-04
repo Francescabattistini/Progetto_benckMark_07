@@ -184,7 +184,7 @@ input[type="checkbox"]:checked::after {
   flex-wrap: wrap;
 }
 
-.button-answer {
+/* .button-answer {
   padding: 20px;
   background-color: #24294f;
   color: white;
@@ -195,6 +195,25 @@ input[type="checkbox"]:checked::after {
   transition: background 0.3s ease;
   box-shadow: -1px -1px 10px white;
   border: 2px solid transparent;
+} */
+.button-answer {
+  width: 30%;
+  margin: 20px;
+  border-radius: 3em;
+  border: 2px solid hsla(0, 1%, 100%, 0.8);
+  box-shadow: #fff;
+  border-bottom: rgb(255, 255, 255);
+}
+button {
+  padding: 20px;
+  cursor: pointer;
+  margin-top: 30px;
+  width: 43%;
+  font-family: "Outfit", sans-serif;
+  color: #ffffff;
+  background-color: hsla(290, 71%, 77%, 0.24);
+  border: 3px solid hsla(290, 71%, 77%, 0.171);
+  border-radius: 55px;
 }
 
 .button-answer:hover {
