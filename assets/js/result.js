@@ -102,7 +102,7 @@ if (userScore === "false") {
 	  ${
       passFailText === "Pass"
         ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder)</p>'
-        : ""
+        : '<p style="font-size: 100px;">😢</p>'
     }
 	`;
 }
