@@ -22,7 +22,6 @@ const clickStar = (starId) => {
 
 const onStarLeave = (starId) => {
   const img = document.getElementById(starId);
-  img.classList.remove("enabled");
   checkStar(currentId);
 };
 

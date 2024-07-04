@@ -42,7 +42,6 @@ if (userScore === "false") {
   par.innerText = "ti ho fregato";
 
   const innerChart = document.getElementById("inner-chart"); //questi
-  innerChart.innerText = "ciao"
   innerChart.remove()
 
   const canvas = document.querySelector("canvas");

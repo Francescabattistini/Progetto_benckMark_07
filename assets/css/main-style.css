@@ -110,7 +110,9 @@ input[type="checkbox"]:checked::after {
 }
 /*BUTTON*********************/
 .bottone,
-.bottoneResult:hover {
+.bottoneResult:hover,
+.bootton:hover,
+.bootton {
   font-size: 1.2em;
   font-weight: bold;
   padding: 18px 45px;
@@ -118,6 +120,11 @@ input[type="checkbox"]:checked::after {
   border: none;
   box-shadow: 0px 0px 22px #00ffff;
   color: black;
+}
+
+.bootton {
+  background-color: #00ffff;
+  box-shadow: none;
 }
 
 .bottone:disabled,
@@ -482,6 +489,7 @@ button {
   background-size: cover;
   display: flex;
   justify-content: center;
+  margin-bottom: 200px;
 }
 
 .epicode_logo {
@@ -525,24 +533,13 @@ button {
 
 .star-container {
   margin-bottom: 40px;
+  text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .feedbackStars {
-  display: flex;
-  justify-content: space-around;
-  width: 64%;
-}
-
-.bootton {
-  padding: 14px 40px;
-  color: rgb(0, 12, 82);
-  font-weight: bold;
-  font-size: larger;
-  border-radius: 5px;
-  background-color: #00ffff;
-  border: none;
+  width: 100%;
 }
 
 .button:hover {
@@ -558,6 +555,8 @@ hr {
 }
 
 .disable-star {
+  flex: 1;
+  padding: 10px;
   filter: opacity(0.2);
   &.enabled {
     filter: drop-shadow(0px 0px 4px #00ffff);
