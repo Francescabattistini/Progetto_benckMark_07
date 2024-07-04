@@ -34,15 +34,15 @@
 	} else {
 	// Aggiorna il contenuto del div delle risposte corrette
 	document.querySelector('#correctDiv .correct-content').innerHTML = `
-	  <h1>Correct</h1>
-	  <strong><span>${correctPercent}</span>%</strong>
+	  <h2>Correct</h2>
+	  <strong><span class="percent">${correctPercent}%</span></strong>
 	  <h6 class="result-questions"><span>${correctAnswers}</span> / ${totalQuestions} questions</h6>
 	`;
   
 	// Aggiorna il contenuto del div delle risposte scorrette
 	document.querySelector('#wrongDiv .wrong-content').innerHTML = `
-	  <h1>Wrong</h1>
-	  <strong><span>${incorrectPercent}</span>%</strong>
+	  <h2>Wrong</h2>
+	  <strong><span class="percent">${incorrectPercent}%</span></strong>
 	  <h6 class="result-questions"><span>${incorrectAnswers}</span> / ${totalQuestions} questions</h6>
 	`;
   

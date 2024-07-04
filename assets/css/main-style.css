@@ -327,6 +327,10 @@ button {
   text-align: center;
 }
 
+.main_result {
+  width: 100%;
+}
+
 .logo {
   text-align: left; /* Mantieni il logo a sinistra */
   display: inline-block; /* Rendi il logo un elemento inline-block */
@@ -351,6 +355,27 @@ button {
   float: left;
   text-align: center;
 }
+
+.correct-content h2, .wrong-content h2 {
+  font-size: 50px;
+  font-weight: 400;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.percent {
+  font-size: 50px;
+  line-height: 0.7;
+  text-align: left;
+}
+
+.result-questions {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin: 0px;
+  line-height: 2;
+}
+
 
 .chart-div {
   width: 50%;
@@ -390,6 +415,8 @@ button {
 
 .divBottoneResult{
   display: block;
+  margin-top: 300px;
+  text-align: center;
 }
 
 .button:hover {
