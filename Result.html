@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/main-style.css" />
-    <title>results-page</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="icon" href="assets/img/EPICODE_fav.png" type="image/png">
-  </head>
 
-  <body id="body_welcome">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/main-style.css" />
+  <title>results-page</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="icon" href="assets/img/EPICODE_fav.png" type="image/png">
+</head>
+
+<body id="body_result">
+  <div class="container80">
     <header id="headerResult">
-      <img
-        class="img-logo"
-        src="assets/img/epicode_logo.png"
-        alt="Logo_Epicode"
-      />
+      <img class="img-logo" src="assets/img/epicode_logo.png" alt="Logo_Epicode" />
     </header>
 
     <div class="titleResult">
@@ -45,8 +43,9 @@
     <div class="divBottoneResult center">
       <button class="bottoneResult" onclick="rateUs()">RATE US</button>
     </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script src="assets/js/result.js"></script>
+</body>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-    <script src="assets/js/result.js"></script>
-  </body>
 </html>
