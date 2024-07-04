@@ -33,7 +33,7 @@ const questions = [
     type: "boolean",
     difficulty: "easy",
     question:
-      "Pointers were not used in the original C programming language; they were added later on in C++.",
+      "Pointers were not used in the original C programming language, they were added later on in C++.",
     correct_answer: "False",
     incorrect_answers: ["True"],
   },
