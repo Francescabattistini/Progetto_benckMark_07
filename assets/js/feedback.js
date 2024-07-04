@@ -41,6 +41,11 @@ function cambiaPagina() {
   // Cambia l'URL della pagina
   window.location.href = "https://epicode.com/it/candidati/";
 }
+
+function returnWelcome() {
+  window.location.href = "welcome-page.html";
+}
+
 function setFocusTocommentHere() {
   let commentHere = document.getElementById("commentHere");
   commentHere.focus();

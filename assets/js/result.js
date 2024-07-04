@@ -1,3 +1,15 @@
+var options = {   //opzioni per il chart
+  plugins: {
+      legend: {
+          display: false
+      }
+  },
+  cutout: "70%", 
+  responsive: true,
+  maintainAspectRatio: false
+};
+
+
 // Recupera il punteggio dell'utente dal localStorage
 const userScore = localStorage.getItem("userScore")
   ? localStorage.getItem("userScore")
@@ -28,10 +40,11 @@ if (history.length >= 0) history.forward(); //funzione per bloccare il tasto per
 if (userScore === "false") {
   const par = document.getElementById("cheater");
   par.innerText = "ti ho fregato";
-  const chartBox = document.getElementById("chart-box");
-  chartBox.style.height = "0px";
-  const myChart = document.getElementById("my-chart"); //questi
-  myChart.style.height = "0px";
+
+  const innerChart = document.getElementById("inner-chart"); //questi
+  innerChart.innerText = "ciao"
+  innerChart.remove()
+
   const canvas = document.querySelector("canvas");
   canvas.remove();
 } else {
@@ -63,16 +76,7 @@ if (userScore === "false") {
         },
       ],
     },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
-      cutout: "70%",
-    },
+    options: options
   });
 
   // Determina se l'utente ha passato o fallito l'esame
@@ -97,6 +101,6 @@ if (userScore === "false") {
 }
 
 // Aggiunge un event listener per il pulsante "RATE US" per reindirizzare alla pagina di feedback
-document.querySelector("footer button").addEventListener("click", function () {
+document.querySelector(".bottoneResult").addEventListener("click", function () {
   window.location.href = "feedback.html";
 });
