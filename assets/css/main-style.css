@@ -12,15 +12,15 @@ body {
   background-size: cover;
 }
 #body_welcome {
-  padding-left: 10%;
+  padding-left: 8%;
   padding-right: 8%;
-  padding-top: 3%;
+  padding-top: 2%;
   color: white;
   font-size: 1.2em;
 }
 /*HEADER************************************************/
 #header_welcome {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
   text-align: left;
   padding: 0 0 1em 0;
 }
@@ -327,8 +327,19 @@ button {
   text-align: center;
 }
 
-.main_result {
-  width: 100%;
+.titleResult{
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.titleResult h1 {
+  font-size: 54px;
+  margin: 0px;
+}
+
+.titleResult h3 {
+  margin: 0px;
+  font-weight: 300;
 }
 
 .logo {
@@ -343,24 +354,35 @@ button {
   text-align: center;
 }
 
-#main-result {
-  width: 100%;
-  position: relative;
-  margin-top: 20px;
+.main_result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #correctDiv,
 #wrongDiv {
-  width: 25%;
-  float: left;
+  flex: 0.5;
   text-align: center;
+}
+
+.chartDiv {
+  flex: 1;
 }
 
 .correct-content h2, .wrong-content h2 {
   font-size: 50px;
   font-weight: 400;
-  margin-bottom: 0px;
-  text-align: center;
+  margin: 0px;
+
+}
+
+.correct-content {
+  text-align: left;
+}
+.wrong-content {
+  color: #dcd2e1;
+  text-align: right;
 }
 
 .percent {
@@ -376,16 +398,9 @@ button {
   line-height: 2;
 }
 
-
-.chart-div {
-  width: 50%;
-  float: left;
-  position: relative;
-}
-
 .chart-box {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  max-height: 400px;
   margin: 0 auto;
   position: relative;
 }
@@ -415,8 +430,8 @@ button {
 
 .divBottoneResult{
   display: block;
-  margin-top: 300px;
   text-align: center;
+  margin-top: 20px;
 }
 
 .button:hover {

@@ -8,37 +8,37 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   
-  <body id="body_result">
-    <header id="header_Result">
-      <nav class="logo">
-        <img
-          src="assets/img/epicode_logo.png"
-          alt="epicode-logo"
-          width="150px"
-        />
-      </nav>
-      <div class="title">
-        <h1>Results</h1>
-        <h3>The summary of your answers:</h3>
-        <h4 id="cheater"></h4>
-      </div>
+  <body id="body_welcome">
+
+    <header id="headerResult">
+      <img
+        class="img-logo"
+        src="assets/img/epicode_logo.png"
+        alt="Logo_Epicode"
+      />
     </header>
 
-    <main id="main_result">
-      <section id="correctDiv" class="center">
-        <div class="correct-content"></div>
-      </section>
+    <div class="titleResult">
+      <h1>Results</h1>
+      <h3>The summary of your answers:</h3>
+      <h4 id="cheater"></h4>
+    </div>
 
-      <section class="chart-div">
+    <main class="main_result" id="main_result">
+      <div id="correctDiv">
+        <div class="correct-content"></div>
+      </div>
+
+      <div class="chartDiv">
         <div class="chart-box">
           <canvas id="my-chart"></canvas>
           <div id="inner-chart" class="center"></div>
         </div>
-      </section>
+      </div>
 
-      <section id="wrongDiv" class="center">
+      <div id="wrongDiv" >
         <div class="wrong-content"></div>
-      </section>
+      </div>
     </main>
 
     <div class="divBottoneResult center">
