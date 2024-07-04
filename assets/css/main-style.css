@@ -52,9 +52,10 @@ body {
 
 .instructions h2 {
   color: #c2128d;
-
   font-weight: 900;
-  margin-bottom: -0.1em;
+  margin-bottom: 7px;
+  font-weight: 600;
+  font-size: 32px;
 }
 
 .instructions_paragrafo {
@@ -643,5 +644,4 @@ hr {
 
 input:focus {
   outline: none;
-  border: 0;
 }
