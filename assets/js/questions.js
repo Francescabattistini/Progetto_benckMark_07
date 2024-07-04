@@ -130,10 +130,14 @@ window.onload = () => {
   init();
 };
 
-history.pushState(null, null, location.href);
+
+if(history.length>=0)history.forward()  //funzione per bloccare il tasto per tornare indietro
+
+  history.pushState(null, null, location.href); //funzione per bloccare il tasto per tornare indietro
 window.onpopstate = function () {
-  history.go(1);
+    history.go(1);
 };
+
 
 function init() {
   randomize(questions);
