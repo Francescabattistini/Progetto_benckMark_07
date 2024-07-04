@@ -92,7 +92,95 @@ const questions = [
     correct_answer: "Java",
     incorrect_answers: ["Python", "C", "Jakarta"],
   },
+  // Domande di difficoltà media
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question: "Which company developed the video game Fortnite?",
+    correct_answer: "Epic Games",
+    incorrect_answers: ["Activision", "Blizzard", "Valve"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "medium",
+    question: "The first computer bug was an actual insect.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question: "What does the acronym HTTP stand for?",
+    correct_answer: "HyperText Transfer Protocol",
+    incorrect_answers: [
+      "HyperText Transmission Protocol",
+      "HighText Transfer Protocol",
+      "HyperText Transfer Program",
+    ],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "medium",
+    question: "The Windows 7 operating system has six main editions.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "medium",
+    question:
+      "Which programming language is designed for managing data in a relational database?",
+    correct_answer: "SQL",
+    incorrect_answers: ["Python", "Java", "C++"],
+  },
+  // Domande di difficoltà difficile
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "hard",
+    question: "The Turing Award is often referred to as the 'Nobel Prize of Computing'.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "Who is known as the 'father of theoretical computer science and artificial intelligence'?",
+    correct_answer: "Alan Turing",
+    incorrect_answers: ["Charles Babbage", "John von Neumann", "Claude Shannon"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "hard",
+    question: "The IBM PC was first released in 1981.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  },
+  {
+    category: "Science: Computers",
+    type: "multiple",
+    difficulty: "hard",
+    question: "What was the name of the first electronic general-purpose computer?",
+    correct_answer: "ENIAC",
+    incorrect_answers: ["UNIVAC", "EDSAC", "Colossus"],
+  },
+  {
+    category: "Science: Computers",
+    type: "boolean",
+    difficulty: "hard",
+    question: "The programming language 'Ruby' was developed in Japan.",
+    correct_answer: "True",
+    incorrect_answers: ["False"],
+  }
 ];
+
 
 //---------- TO DO LIST ----------
 
