@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WelcomePage</title>
-    <link rel="icon" href="assets/img/EPICODE_fav.png" type="image/png">
-    <link rel="stylesheet" href="assets/css/main-style.css" />
-  </head>
 
-  <body id="body_welcome">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WelcomePage</title>
+  <link rel="icon" href="assets/img/EPICODE_fav.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/main-style.css" />
+</head>
+
+<body id="body_welcome">
+  <div class="container80">
+
     <header id="header_welcome">
-      <img
-        class="img-logo"
-        src="assets/img/epicode_logo.png"
-        alt="Logo_Epicode"
-      />
+      <img class="img-logo" src="assets/img/epicode_logo.png" alt="Logo_Epicode" />
     </header>
 
     <main class="main_welcome">
@@ -49,23 +48,18 @@
         <div class="checkBox">
           <input type="checkbox" id="checkbox" name="checkbox" />
           <label for="checkbox">
-            I promise to answer myself without help form anyone</label
-          >
+            I promise to answer myself without help form anyone</label>
         </div>
         <div class="fragola">
-          <button
-            id="buttonChek"
-            onclick="cambiaPagina()"
-            disabled
-            class="bottone"
-            type="button"
-          >
+          <button id="buttonChek" onclick="cambiaPagina()" disabled class="bottone" type="button">
             PROCEED
           </button>
         </div>
       </div>
     </main>
 
-    <script src="assets/js/welcome.js"></script>
-  </body>
+  </div>
+  <script src="assets/js/welcome.js"></script>
+</body>
+
 </html>
