@@ -68,18 +68,21 @@ body {
   display: inline-block;
 }
 .checkBox {
-  margin-left: 0.5em;
   margin-top: 3em;
-
+  display: flex;
+  justify-content: center;
 }
+
 .inputButton {
   margin-top: 60px;
   display: flex;
   justify-content: space-between;
 }
-.fragola {
+
+.button_box {
   margin-right: 8rem;
 }
+
 input[type="checkbox"] {
   appearance: none;
   width: 24px;
@@ -355,6 +358,7 @@ button {
 .titleResult h3 {
   margin: 0px;
   font-weight: 300;
+  font-size: 28px
 }
 
 .logo {
@@ -451,7 +455,7 @@ button {
   display: flex;
   text-align: center;
   flex-direction: column;
-  padding-top: 50px;
+  padding-top: 65px;
   width: 282px;
   height: 281px;
   border-radius: 50%;
@@ -580,11 +584,11 @@ hr {
 }
 
 #commentHere {
-  width: 80%;
+  width: 75%;
   height: 35px;
   background-color: transparent;
   border: 0;
-  font-size: 30px;
+  font-size: 20px;
   border-bottom: 2px solid magenta;
   color: white;
   padding-left: 18px;
