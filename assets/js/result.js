@@ -117,32 +117,46 @@ if (userScore === "false") {
 const divRequest = document.getElementById("divRequest");
 
 for (let i = 0; i < request.length; i++) {
+    flagCorrect = false;
     // Creare un nuovo div per la domanda e le risposte
     const questionDiv = document.createElement("div");
     questionDiv.classList.add("questionContainer");
 
     questionDiv.innerHTML += `
-        <h2>${request[i].question}</h2>
+        <h2><span class="indexRequest">${i +1}. </span><b>${request[i].question}</b></h2>
     `;
 
     request[i].answers.forEach((answer) => {
         if (answer === request[i].correctAnswer) {
             questionDiv.innerHTML += `
-                <p class="correctAnswer">${answer}</p>
+                <p class="correctAnswer"><b>✅ ${answer}</b></p>
             `;
         } else if (answer === request[i].selectAnswer) {
             questionDiv.innerHTML += `
-                <p class="selectedAnswers">${answer}</p>
+                <p class="selectedAnswers">❌ ${answer}</p>
             `;
-        } else {
+        }  else {
             questionDiv.innerHTML += `
-                <p>${answer}</p>
+                <p>⭕ ${answer}</p>
             `;
         }
     });
 
+    if(request[i].selectAnswer === request[i].correctAnswer) {   //se la risposta è corretta
+      questionDiv.style.backgroundColor = "rgba(0, 128, 0, 0.3)"  //colore verde
+    } else {
+      questionDiv.style.backgroundColor = "rgba(255, 0, 0, 0.2)";  //colore rosso
+    }
+
+    
+
     // Aggiungere il div della domanda al div principale
     divRequest.appendChild(questionDiv);
+    const hrQuestion = document.createElement("hr");  //aggiunge un hr
+    hrQuestion.classList.add("hrQuestion");
+    divRequest.appendChild(hrQuestion)
+
+
 }
 
 }

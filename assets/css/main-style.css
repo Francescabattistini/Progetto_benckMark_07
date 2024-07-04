@@ -535,6 +535,16 @@ button {
   box-shadow: 0px 0px 22px #00ffff;
 }
 
+#divRequest {
+  line-height: 2;
+  font-size: 1.2rem;
+  margin-top: 70px;
+}
+
+.indexRequest {
+  color: #00ffff;
+}
+
 .correctAnswer{
   color: green;
 }
@@ -544,9 +554,13 @@ button {
 }
 
 .questionContainer{
-  margin-top: 20px;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #00ffff;
+  padding: 10px;
+}
+
+.hrQuestion{
+  width: 100%;
+  background-color: #00ffff;
+  margin: 15px 0px 15px 0px;
 }
 
 /* ////////////////////////////////////// FEEDBACK///////////////////////////////////////////////////////////// */
