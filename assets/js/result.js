@@ -40,10 +40,11 @@ if (history.length >= 0) history.forward(); //funzione per bloccare il tasto per
 if (userScore === "false") {
   const par = document.getElementById("cheater");
   par.innerText = "ti ho fregato";
-  const chartBox = document.getElementById("chart-box");
-  chartBox.style.height = "0px";
-  const myChart = document.getElementById("my-chart"); //questi
-  myChart.style.height = "0px";
+
+  const innerChart = document.getElementById("inner-chart"); //questi
+  innerChart.innerText = "ciao"
+  innerChart.remove()
+
   const canvas = document.querySelector("canvas");
   canvas.remove();
 } else {
