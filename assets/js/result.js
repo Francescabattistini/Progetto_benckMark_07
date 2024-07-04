@@ -101,8 +101,13 @@ if (userScore === "false") {
   }</p>
 	  ${
       passFailText === "Pass"
+<<<<<<< HEAD
         ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder).</p>'
         : ""
+=======
+        ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder)</p>'
+        : '<p style="font-size: 100px;">😢</p>'
+>>>>>>> 758b62a88d0d53004a80911a62a5a288371b6f6e
     }
 	`;
 }
