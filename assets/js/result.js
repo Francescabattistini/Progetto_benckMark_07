@@ -108,6 +108,6 @@ if (userScore === "false") {
 }
 
 // Aggiunge un event listener per il pulsante "RATE US" per reindirizzare alla pagina di feedback
-document.querySelector("footer button").addEventListener("click", function () {
+document.querySelector(".bottoneResult").addEventListener("click", function () {
   window.location.href = "feedback.html";
 });
