@@ -19,6 +19,8 @@
 		history.go(1);
 	};
 
+	if(history.length>=0)history.forward()  //funzione per bloccare il tasto per tornare indietro
+
 	if(userScore === "false") {
 		const par = document.getElementById('cheater')
 		par.innerText = "ti ho fregato";
