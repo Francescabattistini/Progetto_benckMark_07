@@ -84,7 +84,7 @@ body {
 }
 
 input[type="checkbox"] {
-  appearance: none;
+  appearance: none; 
   width: 24px;
   height: 24px;
   border: 2px solid white;
@@ -102,7 +102,7 @@ input[type="checkbox"]:checked {
 }
 /* Aggiunge il segno di spunta */
 input[type="checkbox"]:checked::after {
-  content: "✓";
+  content: '✓';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -110,7 +110,7 @@ input[type="checkbox"]:checked::after {
   color: white;
   font-size: 14px;
 }
-.checkBox label {
+.checkBox label{
   font-weight: bold;
 }
 /*BUTTON*********************/

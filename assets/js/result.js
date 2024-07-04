@@ -41,6 +41,14 @@ if (userScore === "false") {
   const par = document.getElementById("cheater");
   par.innerText = "ti ho fregato";
 
+  document.getElementById('divIframe').innerHTML =  `
+            <video width="350" autoplay loop muted>
+                <source src="https://external-preview.redd.it/uafMLScOUutOCmzRcIu2h4lgTa6o2tiHAjgP_p8aUuI.gif?width=245&format=mp4&s=7c11aed17fb663ddbd4cb491264137a6723f773d" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        `;
+
+
   const innerChart = document.getElementById("inner-chart"); //questi
   innerChart.remove()
 
