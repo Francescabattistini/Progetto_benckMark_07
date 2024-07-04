@@ -1,3 +1,23 @@
+var options = {   //opzioni per il chart
+  plugins: {
+      tooltip: {
+          enabled: true
+      },
+      legend: {
+          display: false
+      }
+  },
+  elements: {
+      arc: {
+          borderWidth: 0 // Rimuove i bordi degli archi
+      }
+  },
+  cutout: "70%", 
+  responsive: true,
+  maintainAspectRatio: false
+};
+
+
 // Recupera il punteggio dell'utente dal localStorage
 const userScore = localStorage.getItem("userScore")
   ? localStorage.getItem("userScore")
@@ -63,16 +83,7 @@ if (userScore === "false") {
         },
       ],
     },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: false,
-        },
-      },
-      cutout: "70%",
-    },
+    options: options
   });
 
   // Determina se l'utente ha passato o fallito l'esame
