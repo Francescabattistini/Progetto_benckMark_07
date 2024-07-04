@@ -9,6 +9,14 @@ var options = {   //opzioni per il chart
   maintainAspectRatio: false
 };
 
+const jsonString = localStorage.getItem('request'); 
+if (jsonString) {
+  // Convertire la stringa JSON in un array di oggetti
+  const request = JSON.parse(jsonString);
+  console.log(request);
+} else {
+  console.log('No data found in local storage.');
+}
 
 // Recupera il punteggio dell'utente dal localStorage
 const userScore = localStorage.getItem("userScore")

@@ -210,6 +210,7 @@ let correctAnswer = 0;
 let numberOfQuestions = 10;
 let timer; //variabile per lo scorrere del tempo
 let strike = 0;
+let request = []
 
 window.addEventListener("blur", function () {
   strike++;
@@ -238,7 +239,6 @@ function init() {
 
 function randomize(array) {
   let currentIndex = array.length - 1; //----- Mettiamo qui il (- 1) per far si che non vad ad intaccare il random
-  console.log(currentIndex);
   let temporaryValue;
   let randomIndex;
   for (let i = currentIndex; i >= 0; i--) {
@@ -280,9 +280,12 @@ function displayQuestions(index) {
         correctAnswer++;
       }
       displayIndex++;
+      request.push({question: questions[index].question, answers: allAnswers, correctAnswer: questions[index].correct_answer, selectAnswer: allAnswers[i]})
       if (displayIndex < numberOfQuestions) {
         displayQuestions(displayIndex);
       } else {
+        const jsonString = JSON.stringify(request);  //conversione, per poter salvare un array di oggetti in un local storage
+        localStorage.setItem('request', jsonString);
         localStorage.setItem("userScore", correctAnswer);
         localStorage.setItem("totalQuestions", numberOfQuestions);
         window.location.href = "result.html";
