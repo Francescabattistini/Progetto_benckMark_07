@@ -1,10 +1,10 @@
 var options = {   //opzioni per il chart
   plugins: {
-      legend: {
-          display: false
-      }
+    legend: {
+      display: false
+    }
   },
-  cutout: "70%", 
+  cutout: "70%",
   responsive: true,
   maintainAspectRatio: false
 };
@@ -39,9 +39,9 @@ if (history.length >= 0) history.forward(); //funzione per bloccare il tasto per
 
 if (userScore === "false") {
   const par = document.getElementById("cheater");
-  par.innerText = "ti ho fregato";
+  par.innerText = "GOTCHA";
 
-  document.getElementById('divIframe').innerHTML =  `
+  document.getElementById('divIframe').innerHTML = `
             <video width="350" autoplay loop muted>
                 <source src="https://external-preview.redd.it/uafMLScOUutOCmzRcIu2h4lgTa6o2tiHAjgP_p8aUuI.gif?width=245&format=mp4&s=7c11aed17fb663ddbd4cb491264137a6723f773d" type="video/mp4">
                 Your browser does not support the video tag.
@@ -91,23 +91,15 @@ if (userScore === "false") {
 
   // Aggiorna il contenuto interno del grafico a ciambella
   document.getElementById("inner-chart").innerHTML = `
-	  <p class="title-chart">${
-      passFailText === "Pass" ? "Congratulations!" : "Try Again!"
+	  <p class="title-chart">${passFailText === "Pass" ? "Congratulations!" : "Try Again!"
     }</p>
-	  <p class="${passFailText === "Pass" ? "blue" : "red"}">${
-    passFailText === "Pass"
+	  <p class="${passFailText === "Pass" ? "blue" : "red"}">${passFailText === "Pass"
       ? "You passed the exam"
       : "You did not pass the exam"
-  }</p>
-	  ${
-      passFailText === "Pass"
-<<<<<<< HEAD
-        ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder).</p>'
-        : ""
-=======
-        ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder)</p>'
-        : '<p style="font-size: 100px;">😢</p>'
->>>>>>> 758b62a88d0d53004a80911a62a5a288371b6f6e
+    }</p>
+	  ${passFailText === "Pass"
+      ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder).</p>'
+      : '<p style="font-size: 100px;">😢</p>'
     }
 	`;
 }

@@ -6,11 +6,13 @@
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
 }
+
 body {
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 #body_welcome {
   /* padding-left: 8%;
   padding-right: 8%;
@@ -20,53 +22,65 @@ body {
   display: flex;
   justify-content: center;
 }
+
 /*HEADER************************************************/
 #header_welcome {
   margin-bottom: 1.5em;
   text-align: left;
   padding: 0 0 1em 0;
 }
+
 .img-logo {
   width: 18%;
 }
+
 /*MAIN**************************************************/
 .main_welcome h1 {
   font-size: 6rem;
   line-height: 0.9;
   font-weight: 800;
 }
+
 .main_welcome h1 span {
   font-weight: normal;
 }
+
 /*INSTRUCTION*********************/
 .instructions {
   margin-top: 3rem;
 }
+
 .instructions h2 {
   color: #c2128d;
 
   font-weight: 900;
   margin-bottom: -0.1em;
 }
+
 .instructions_paragrafo {
   width: 70%;
 }
+
 /*LISTA*********************/
 .lista {
   margin-left: 2em;
   margin-top: 2em;
 }
+
 .lista li {
   line-height: 1.6;
 }
+
 .lista li span {
   font-weight: bold;
 }
+
 /*INPUT CHECK*********************/
 .checkBox,
 .divBottone {
   display: inline-block;
 }
+
 .checkBox {
   margin-top: 3em;
   display: flex;
@@ -84,7 +98,7 @@ body {
 }
 
 input[type="checkbox"] {
-  appearance: none; 
+  appearance: none;
   width: 24px;
   height: 24px;
   border: 2px solid white;
@@ -92,14 +106,17 @@ input[type="checkbox"] {
   cursor: pointer;
   position: relative;
   transition: background-color 0.3s, border-color 0.3s;
-  vertical-align: middle; /* Allinea verticalmente con il testo */
+  vertical-align: middle;
+  /* Allinea verticalmente con il testo */
   margin-right: 10px;
 }
+
 /* Stile quando il checkbox è selezionato */
 input[type="checkbox"]:checked {
   background-color: #cb2376;
   border-color: #cb2376;
 }
+
 /* Aggiunge il segno di spunta */
 input[type="checkbox"]:checked::after {
   content: '✓';
@@ -110,9 +127,11 @@ input[type="checkbox"]:checked::after {
   color: white;
   font-size: 14px;
 }
-.checkBox label{
+
+.checkBox label {
   font-weight: bold;
 }
+
 /*BUTTON*********************/
 .bottone,
 .bottoneResult:hover,
@@ -141,6 +160,18 @@ input[type="checkbox"]:checked::after {
   background-color: transparent;
   border: 2px solid white;
   box-shadow: 0px 0px 22px #3f246f;
+}
+
+#cheater {
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+video {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
 }
 
 /* //////////////////////////// QUESTION/////////////////////////////////////// */
@@ -227,6 +258,7 @@ input[type="checkbox"]:checked::after {
   box-shadow: #fff;
   border-bottom: rgb(255, 255, 255);
 }
+
 button {
   padding: 20px;
   cursor: pointer;
@@ -240,11 +272,9 @@ button {
 }
 
 .button-answer:hover {
-  background: linear-gradient(
-    176deg,
-    rgba(210, 0, 148, 1) 31%,
-    rgba(144, 0, 128, 1) 70%
-  );
+  background: linear-gradient(176deg,
+      rgba(210, 0, 148, 1) 31%,
+      rgba(144, 0, 128, 1) 70%);
 }
 
 .body-box-footer {
@@ -310,7 +340,8 @@ button {
   transform: rotate(-90deg);
   transform-origin: 50% 50%;
   stroke-dasharray: 440;
-  stroke-dashoffset: 0; /* Inizia pieno */
+  stroke-dashoffset: 0;
+  /* Inizia pieno */
 }
 
 .progress-time {
@@ -330,14 +361,17 @@ button {
   display: flex;
   justify-content: center;
 }
+
 #header_welcome {
   margin-bottom: 2em;
   text-align: left;
   padding: 0 0 1em 0;
 }
+
 .img-logo {
   width: 18%;
 }
+
 #header_Result {
   width: 100%;
   padding: 20px;
@@ -362,23 +396,30 @@ button {
 }
 
 .logo {
-  text-align: left; /* Mantieni il logo a sinistra */
-  display: inline-block; /* Rendi il logo un elemento inline-block */
-  vertical-align: middle; /* Allinea verticalmente */
+  text-align: left;
+  /* Mantieni il logo a sinistra */
+  display: inline-block;
+  /* Rendi il logo un elemento inline-block */
+  vertical-align: middle;
+  /* Allinea verticalmente */
 }
+
 .title-chart {
   font-size: 23px;
 }
+
 .blue {
   color: #00ffff;
   font-weight: bold;
   font-size: 1.5rem;
 }
+
 .description-result {
   font-weight: 200;
   font-size: 16px;
   text-align: center;
 }
+
 .title {
   margin: 10px auto;
   display: block;
@@ -411,6 +452,7 @@ button {
 .correct-content {
   text-align: left;
 }
+
 .wrong-content {
   color: white;
   text-align: right;
@@ -435,6 +477,7 @@ button {
   margin: 0 auto;
   position: relative;
 }
+
 .ombra {
   border: 3px solid red;
   width: 100%;
@@ -442,6 +485,7 @@ button {
   border-radius: 50%;
   box-shadow: 1px -1px 14px 16px #00000069;
 }
+
 #my-chart {
   width: 100%;
   max-height: 100%;
@@ -572,6 +616,7 @@ hr {
   flex: 1;
   padding: 10px;
   filter: opacity(0.2);
+
   &.enabled {
     filter: drop-shadow(0px 0px 4px #00ffff);
   }
@@ -595,6 +640,7 @@ hr {
   color: white;
   padding-left: 18px;
 }
+
 input:focus {
   outline: none;
   border: 0;
