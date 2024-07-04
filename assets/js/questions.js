@@ -143,7 +143,8 @@ const questions = [
     category: "Science: Computers",
     type: "boolean",
     difficulty: "hard",
-    question: "The Turing Award is often referred to as the 'Nobel Prize of Computing'.",
+    question:
+      "The Turing Award is often referred to as the 'Nobel Prize of Computing'.",
     correct_answer: "True",
     incorrect_answers: ["False"],
   },
@@ -151,9 +152,14 @@ const questions = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "hard",
-    question: "Who is known as the 'father of theoretical computer science and artificial intelligence'?",
+    question:
+      "Who is known as the 'father of theoretical computer science and artificial intelligence'?",
     correct_answer: "Alan Turing",
-    incorrect_answers: ["Charles Babbage", "John von Neumann", "Claude Shannon"],
+    incorrect_answers: [
+      "Charles Babbage",
+      "John von Neumann",
+      "Claude Shannon",
+    ],
   },
   {
     category: "Science: Computers",
@@ -167,7 +173,8 @@ const questions = [
     category: "Science: Computers",
     type: "multiple",
     difficulty: "hard",
-    question: "What was the name of the first electronic general-purpose computer?",
+    question:
+      "What was the name of the first electronic general-purpose computer?",
     correct_answer: "ENIAC",
     incorrect_answers: ["UNIVAC", "EDSAC", "Colossus"],
   },
@@ -178,9 +185,8 @@ const questions = [
     question: "The programming language 'Ruby' was developed in Japan.",
     correct_answer: "True",
     incorrect_answers: ["False"],
-  }
+  },
 ];
-
 
 //---------- TO DO LIST ----------
 
@@ -218,14 +224,12 @@ window.onload = () => {
   init();
 };
 
+if (history.length >= 0) history.forward(); //funzione per bloccare il tasto per tornare indietro
 
-if(history.length>=0)history.forward()  //funzione per bloccare il tasto per tornare indietro
-
-  history.pushState(null, null, location.href); //funzione per bloccare il tasto per tornare indietro
+history.pushState(null, null, location.href); //funzione per bloccare il tasto per tornare indietro
 window.onpopstate = function () {
-    history.go(1);
+  history.go(1);
 };
-
 
 function init() {
   randomize(questions);
@@ -249,7 +253,10 @@ function randomize(array) {
 //***************************************************************************************************** */
 function displayQuestions(index) {
   textQuestion.innerText = questions[index].question;
-  footerNumber.innerHTML = index + 1 + "<span> / 10 </span>";
+  footerNumber.innerHTML =
+    '<span style="color:white">QUESTION </span>' +
+    (index + 1) +
+    "<span> / 10 </span>";
   const allAnswers = [];
 
   allAnswers.push(

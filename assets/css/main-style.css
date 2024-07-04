@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap");
 
 * {
-  margin: 0, auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
@@ -104,7 +104,8 @@ input[type="checkbox"]:checked::after {
   font-weight: bold;
 }
 /*BUTTON*********************/
-.bottone, .bottoneResult:hover {
+.bottone,
+.bottoneResult:hover {
   font-size: 1.2em;
   font-weight: bold;
   padding: 18px 45px;
@@ -114,7 +115,8 @@ input[type="checkbox"]:checked::after {
   color: black;
 }
 
-.bottone:disabled, .bottoneResult {
+.bottone:disabled,
+.bottoneResult {
   font-weight: bold;
   font-size: 1.2em;
   padding: 18px 45px;
@@ -123,7 +125,6 @@ input[type="checkbox"]:checked::after {
   border: 2px solid white;
   box-shadow: 0px 0px 22px #3f246f;
 }
-
 
 /* //////////////////////////// QUESTION/////////////////////////////////////// */
 
@@ -415,6 +416,7 @@ button {
 .main-container {
   width: 80%;
 }
+
 .body-container {
   text-align: center;
   height: 60vh;
@@ -427,19 +429,20 @@ button {
   width: 19%;
 }
 
-/* h1,
-h2 {
+#h1-titolo,
+.titolih2 {
   color: white;
 }
 
-h2 {
+.titolih2 {
   font-weight: 200;
 }
- */
+
 .title {
   font-size: 2em;
   margin-bottom: 30px;
 }
+
 .subtitle {
   margin-bottom: 40px;
 }
@@ -449,11 +452,13 @@ h2 {
   display: flex;
   justify-content: space-around;
 }
+
 .feedbackStars {
   display: flex;
   justify-content: space-around;
   width: 64%;
 }
+
 .button {
   padding: 14px 40px;
   color: rgb(0, 12, 82);
@@ -461,30 +466,32 @@ h2 {
   font-size: larger;
   border-radius: 5px;
   background-color: #00ffff;
+  border: none;
 }
 
 .button:hover {
   box-shadow: 0px -1px 14px 1px #00ffff;
 }
 
-/* hr {
+hr {
   height: 2px;
   background-color: rgb(255, 0, 200);
   border: none;
   width: 70%;
   margin: auto;
 }
- */
+
 .disable-star {
   filter: opacity(0.2);
-
   &.enabled {
-    filter: opacity(1);
+    filter: drop-shadow(0px 0px 4px #00ffff);
   }
 }
+
 .h2-feedback {
   margin-bottom: 35px;
 }
+
 .textarea {
   margin-bottom: 40px;
 }
@@ -493,12 +500,14 @@ h2 {
   width: 80%;
   height: 35px;
   background-color: transparent;
-  border-bottom: magenta;
-  border-style: double;
+  border: 0;
+  /*   border-bottom: magenta;
+  border-style: double; */
+  border-bottom: 2px solid magenta;
   color: white;
   padding-left: 25px;
 }
-
 input:focus {
   outline: none;
+  border: 0;
 }

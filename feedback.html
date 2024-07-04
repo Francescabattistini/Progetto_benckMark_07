@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="it">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/main-style.css">
-</head>
+    <link rel="stylesheet" href="assets/css/main-style.css" />
+  </head>
 
-<body id="body_feedback">
+  <body id="body_feedback">
     <div class="main-container">
-        <header>
-            <div class="epicode_logo">
-                <img class="logo" src="assets/img/epicode_logo.png" />
+      <header>
+        <div class="epicode_logo">
+          <img
+            class="logo"
+            src="assets/img/epicode_logo.png"
+            alt="logoEpicode"
+            title=" logo Epicode."
+          />
+        </div>
+      </header>
+      <main>
+        <div class="body-container">
+          <div>
+            <div class="title">
+              <h1 id="h1-titolo">Tell us how it's going</h1>
             </div>
-        </header>
-        <main>
-            <div class="body-container">
-                <div>
-                    <div class="title">
-                        <h1>Tell us how it's going</h1>
-                    </div>
-                    <div class="subtitle">
-                        <h2>From 0 to 10, how likely are you to recommend EPICODE to a friend or a colleague?</h2>
-                    </div>
-                </div>
+            <div class="subtitle">
+              <h2 class="titolih2">
+                From 0 to 10, how likely are you to recommend EPICODE to a
+                friend or a colleague?
+              </h2>
+            </div>
+          </div>
 
-                <div class="star-container">
-                    <div id="feedback-stars-container" class="feedbackStars">
-                    
-                    </div>
+          <div class="star-container">
+            <div id="feedback-stars-container" class="feedbackStars"></div>
+          </div>
+          <div class="h2-feedback">
+            <h2 class="titolih2">
+              Leave us an open feedback about your experience so far
+            </h2>
+          </div>
+          <div class="textarea">
+            <input
+              class="input"
+              id="commentHere"
+              type="text"
+              placeholder="Write your comment here"
+            />
+          </div>
 
-                </div>
-                <div class="h2-feedback">
-                    <h2>Leave us an open feedback about your experience so far</h2>
-                </div>
-                <div class="textarea">
-                    <input id="commentHere" type="text" placeholder="Write your comment here">
-                </div>
-                <footer>
-                    <div>
-                        <button onclick="cambiaPagina()" class="button" type="button">MORE INFO</button>
-                    </div>
-                </footer>
-        </main>
-    </div>
+          <div>
+            <button onclick="cambiaPagina()" class="button" type="button">
+              MORE INFO
+            </button>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="assets/js/feedback.js"></script>
-</body>
-
+  </body>
 </html>
