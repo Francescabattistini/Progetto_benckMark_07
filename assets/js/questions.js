@@ -263,7 +263,16 @@ function displayQuestions(index) {
     ...questions[index].incorrect_answers,
     questions[index].correct_answer
   );
-  randomize(allAnswers);
+
+  if(questions[index].type === "multiple") {   //se sono di tipo multiple allora fai il random
+    randomize(allAnswers);  //random delle risposte }
+  } else if (questions[index].type === "boolean") {
+    if (allAnswers[0] === "False" && allAnswers[1] === "True") {  //mette sempre prima true per primo
+      allAnswers.reverse();
+      
+    }
+  }
+  
 
   const bodyBoxRow = document.getElementById("bodyBoxRow");
   bodyBoxRow.innerHTML = "";
@@ -292,11 +301,11 @@ function displayQuestions(index) {
       }
     });
   }
-  circleProgress(differentTiming(questions[index]));
+  circleProgress(differentTiming(questions[index]), index, allAnswers);
 }
 
 //***************************************************************************************************** */
-function circleProgress(duration) {
+function circleProgress(duration, index, allAnswers) {
   const totalTime = duration; // Tempo totale in secondi
   let remainingTime = totalTime; //è il tempo che va scendere, quindi che viene aggiornato
 
@@ -321,10 +330,13 @@ function circleProgress(duration) {
     if (remainingTime <= 0) {
       clearInterval(timer);
       displayIndex++;
+      request.push({question: questions[index].question, answers: allAnswers, correctAnswer: questions[index].correct_answer, selectAnswer: ""})
       if (displayIndex < numberOfQuestions) {
         //controllo se è finito l'array di oggetti
         displayQuestions(displayIndex); //avvia la funzione di sopra show, quindi compare una nuova domanda
       } else {
+        const jsonString = JSON.stringify(request);  //conversione, per poter salvare un array di oggetti in un local storage
+        localStorage.setItem('request', jsonString);
         localStorage.setItem("userScore", correctAnswer);
         localStorage.setItem("totalQuestions", numberOfQuestions);
         window.location.href = "result.html";

@@ -30,6 +30,7 @@
             questions, so don't worry if you're of a few of them.
           </p>
         </div>
+
         <div class="lista">
           <ul>
             <li>
@@ -44,18 +45,30 @@
           </ul>
         </div>
       </div>
-      <div class="inputButton">
-        <div class="checkBox">
-          <input type="checkbox" id="checkbox" name="checkbox" />
-          <p for="checkbox" class="labelWelcome">
-            I promise to answer myself without help form anyone</p>
+
+      <form>
+        <div class="inpNomeCognome">
+          <label for="inpNome">Nome:</label>
+          <input placeholder="Nome..." type="text" id="inpNome" required>
+          <label for="inpCognome">Cognome:</label>
+          <input placeholder="Cognome..." type="text" id="inpCognome" required>
         </div>
-        <div class="button_box">
-          <button id="buttonChek" onclick="cambiaPagina()" disabled class="bottone" type="button">
-            PROCEED
-          </button>
+
+        <div class="inputButton">
+          <div class="checkBox">
+            <input type="checkbox" id="checkbox" name="checkbox" />
+            <p for="checkbox" class="labelWelcome">
+              I promise to answer myself without help form anyone</p>
+          </div>
+          <div class="button_box">
+            <button id="buttonChek" onclick="cambiaPagina()" disabled class="bottone" type="button">
+              PROCEED
+            </button>
+          </div>
         </div>
-      </div>
+      </form>
+
+
     </main>
   </div>
   <script src="assets/js/welcome.js"></script>
