@@ -44,9 +44,3 @@ function cambiaPagina() {
 function returnWelcome() {
   window.location.href = "welcome-page.html";
 }
-
-function setFocusTocommentHere() {
-  let commentHere = document.getElementById("commentHere");
-  commentHere.focus();
-}
-setTimeout(setFocusToInput2, 2000);
