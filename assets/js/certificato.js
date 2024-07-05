@@ -1,7 +1,12 @@
 let nome = localStorage.getItem("name");
 let cognome = localStorage.getItem("surname");
-
 let today = new Date();  //prende la data odierna
+
+const hName = document.getElementById("nome")
+const hCognome = document.getElementById("cognome")
+const currentDate = document.getElementById("currentDate")
+
+
 
 // Estrai il giorno, il mese e l'anno
 let day = today.getDate();
@@ -19,5 +24,36 @@ if (month < 10) {
 // Componi la data in formato "dd/mm/yyyy"
 let formattedDate = day + '/' + month + '/' + year;
 
-console.log(formattedDate)
+hName.innerText = nome;
+hCognome.innerText = cognome;
+currentDate.innerText = formattedDate;
 
+
+document.getElementById('generatePDF').addEventListener('click', function () {
+  // Seleziona il contenuto della pagina
+  const element = document.getElementById('bodyCertificato');
+  
+  // Utilizza html2canvas per catturare l'elemento con il background image
+  html2canvas(element).then(canvas => {
+      // Converti il canvas in immagine
+      const imgData = canvas.toDataURL('image/jpeg');
+
+      // Dimensioni desiderate per il PDF
+      const pdfWidth = canvas.width * 0.75; // Scala il canvas a 75% della larghezza
+      const pdfHeight = canvas.height * 0.75; // Scala il canvas a 75% dell'altezza
+
+      // Crea un nuovo documento jsPDF in formato orizzontale
+      const { jsPDF } = window.jspdf;
+      const pdf = new jsPDF({
+          orientation: 'landscape', // Orientamento orizzontale
+          unit: 'pt', // Unità di misura: punti
+          format: [pdfWidth, pdfHeight] // Dimensioni del PDF
+      });
+
+      // Aggiungi l'immagine al PDF
+      pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+
+      // Salva il PDF
+      pdf.save('certificato.pdf');
+  });
+});

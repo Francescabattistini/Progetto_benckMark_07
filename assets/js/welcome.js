@@ -14,7 +14,7 @@ window.addEventListener('pageshow', init);
 
 function cambiaPagina() {
   localStorage.setItem("name", inpNome.value);
-  localStorage.setItem("surmane", inpCognome.value)
+  localStorage.setItem("surname", inpCognome.value)
   window.location.href = 'questions.html';
 }
 
