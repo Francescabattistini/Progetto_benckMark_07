@@ -103,9 +103,10 @@ body {
 
 
 .inputButton {
-  margin-top: 0px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
+
 }
 
 .button_box {
@@ -371,6 +372,10 @@ button {
   font-size: 36px;
   font-weight: bold;
   color: #333;
+}
+
+#footer_question {
+  padding-bottom: 20px;
 }
 
 /* ////////////////////////////////////////////////// RESULT/////////////////////////////////////////////// */
@@ -699,10 +704,6 @@ input:focus {
     justify-content: center;
     color: white;
     height: 100%;
-}
-
-.container80 {
-  width: 80%;
 }
 
 #headerCertificato {
