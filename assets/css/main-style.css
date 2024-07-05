@@ -677,3 +677,95 @@ hr {
 input:focus {
   outline: none;
 }
+
+
+/* -------------- Certificato ---------------- */
+
+#bodyCertificato {
+    max-width: 297px 210px;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+    max-height: 2480px;
+}
+
+
+#headerCertificato {
+    margin-top: 40px;
+}
+
+.header-box-certificato {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+#mainCertificato {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.module-certifcation h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.module-name h2 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.module-name span {
+    font-weight: 500;
+}
+
+.certificate-body {
+    margin-top: 50px;
+    display: flex;
+    gap: 10px;
+
+}
+
+.certificate-body h1 {
+    font-weight: 400;
+    font-size: 60px;
+    margin-block-start: 0;
+}
+
+.white-line {
+    border: 2px solid white;
+    width: 8%;
+    margin-left: 1px;
+}
+
+.topic h2 {
+    color: #40DAE9;
+    font-weight: 200;
+}
+
+#footerCertificato {
+    margin-top: 55px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#currentDate {
+    margin-bottom: 5px;
+}
+
+.release-date {
+    color: #40DAE9;
+    font-weight: 200;
+}
+
+.logo-certificato {
+    width: 200px;
+}
+
+.logo-certificato img {
+    width: 100%;
+}
