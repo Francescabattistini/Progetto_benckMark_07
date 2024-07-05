@@ -593,6 +593,10 @@ button {
   margin-left: 10px;
 }
 
+#square-check {
+  margin-right: 6px;
+}
+
 .questionContainer {
   padding: 10px;
 }

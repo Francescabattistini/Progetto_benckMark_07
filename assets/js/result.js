@@ -137,11 +137,11 @@ if (userScore === "false") {
       if(answer === request[i].selectAnswer) {  //quella selezionata deve avere il check all'inizio
         if(request[i].selectAnswer === request[i].correctAnswer) {
           questionDiv.innerHTML += `
-          <p class="correctAnswer"><b><i class="fa-regular fa-square-check"></i>${answer} <i class="fa-solid fa-check" style="color: #44eebb;" id="green-check"></i></b></p>
+          <p class="correctAnswer"><b><i class="fa-regular fa-square-check" id= "square-check"></i>${answer} <i class="fa-solid fa-check" style="color: #44eebb;" id="green-check"></i></b></p>
           `;
         } else {
           questionDiv.innerHTML += `
-          <p class="correctAnswer"><b><i class="fa-regular fa-square-check"></i>${answer} </b></p>
+          <p class="correctAnswer"><b><i class="fa-regular fa-square-check" id= "square-check"></i>${answer} </b></p>
           `;
         }
       } else {
