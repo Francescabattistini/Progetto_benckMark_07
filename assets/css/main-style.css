@@ -583,9 +583,6 @@ button {
 /* ////////////////////////////////////// FEEDBACK///////////////////////////////////////////////////////////// */
 
 #body_feedback {
-  /* background-image: url(../img/bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
   display: flex;
   justify-content: center;
   margin-bottom: 200px;

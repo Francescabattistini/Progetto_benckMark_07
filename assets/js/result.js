@@ -39,14 +39,14 @@ const incorrectAnswers = totalQuestions - correctAnswers;
 // Calcola le percentuali di risposte corrette e scorrette
 const correctPercent = (correctAnswers / totalQuestions) * 100;
 const incorrectPercent = 100 - correctPercent;
-
+// inizio evento per non tornare indietro
 history.pushState(null, null, location.href);
 window.onpopstate = function () {
   history.go(1);
 };
 
 if (history.length >= 0) history.forward(); //funzione per bloccare il tasto per tornare indietro
-
+//anticit per evitare che gli utenti barino
 if (userScore === "false") {
   const par = document.getElementById("cheater");
   par.innerText = "GOTCHA";
@@ -119,7 +119,6 @@ if (userScore === "false") {
   const divRequest = document.getElementById("divRequest");
 
   for (let i = 0; i < request.length; i++) {
-    flagCorrect = false;
     // Creare un nuovo div per la domanda e le risposte
     const questionDiv = document.createElement("div");
     questionDiv.classList.add("questionContainer");
@@ -164,4 +163,44 @@ if (userScore === "false") {
 // Aggiunge un event listener per il pulsante "RATE US" per reindirizzare alla pagina di feedback
 document.querySelector(".bottoneResult").addEventListener("click", function () {
   window.location.href = "feedback.html";
+});
+
+////////////////////////////////////////
+
+function launchConfetti() {
+  const duration = 3 * 1000;
+  const end = Date.now() + duration;
+  const colors = ["#00ffff", "#d20094"];
+
+  (function frame() {
+    confetti({
+      particleCount: 2,
+      angle: 60,
+      spread: 55,
+      origin: { x: 0 },
+      colors: colors,
+    });
+    confetti({
+      particleCount: 2,
+      angle: 120,
+      spread: 55,
+      origin: { x: 1 },
+      colors: colors,
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(frame);
+    }
+  })();
+}
+
+function checkAnswers(correctPercent) {
+  if (correctPercent >= 60) {
+    launchConfetti();
+  } else {
+    console.log("Meno di 60 risposte corrette");
+  }
+}
+document.addEventListener("DOMContentLoaded", (event) => {
+  checkAnswers(correctPercent);
 });
