@@ -591,7 +591,6 @@ button {
 #body_feedback {
   display: flex;
   justify-content: center;
-  margin-bottom: 200px;
 }
 
 .epicode_logo {
@@ -601,7 +600,7 @@ button {
 .container80 {
   width: 80%;
   margin-top: 40px;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .body-container {
