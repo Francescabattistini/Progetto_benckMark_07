@@ -201,6 +201,7 @@ function checkAnswers(correctPercent) {
     console.log("Meno di 60 risposte corrette");
   }
 }
+
 document.addEventListener("DOMContentLoaded", (event) => {
   checkAnswers(correctPercent);
 });
