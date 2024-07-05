@@ -134,7 +134,7 @@ if (userScore === "false") {
     request[i].answers.forEach((answer) => {
       if (answer === request[i].correctAnswer) {
         questionDiv.innerHTML += `
-                <p class="correctAnswer"><b><i class="fa-regular fa-square-check"></i> ${answer}</b></p>
+                <p class="correctAnswer"><b><i class="fa-regular fa-square-check"></i>${answer}<i class="fa-solid fa-check" style="color: #44eebb;" id="green-check"></i> </b></p>
             `;
       } else if (answer === request[i].selectAnswer) {
         questionDiv.innerHTML += `

@@ -17,7 +17,9 @@ body {
 i {
   color: white;
   margin-right: 3px;
+
 }
+
 
 #body_welcome {
   /* padding-left: 8%;
@@ -576,8 +578,14 @@ button {
   color: white;
 }
 
-.correctAnswer {
+/* .correctAnswer {
   color: green;
+} */
+
+
+
+#green-check {
+  margin-left: 10px;
 }
 
 .selectedAnswers {
