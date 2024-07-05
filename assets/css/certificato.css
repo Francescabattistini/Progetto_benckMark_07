@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    border: 0;
+}
+
+#bodyCertificato {
+    background-image: url(../img/bg.jpg);
+    background-size: cover;
+    max-width: 297px 210px;
+    font-family: 'Outfit', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.container80 {
+    width: 80%;
+}
+
+header {
+    margin-top: 40px;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.module-certifcation h2 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.module-name h2 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
+.module-name span {
+    font-weight: 500;
+}
+
+.certificate-body {
+    margin-top: 50px;
+    display: flex;
+}
+
+.name-box h1 {
+    margin-right: 8px;
+}
+
+.certificate-body h1 {
+    font-weight: 400;
+    font-size: 60px;
+}
