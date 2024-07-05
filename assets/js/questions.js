@@ -267,9 +267,7 @@ function displayQuestions(index) {
   if(questions[index].type === "multiple") {   //se sono di tipo multiple allora fai il random
     randomize(allAnswers);  //random delle risposte }
   } else if (questions[index].type === "boolean") {
-    console.log(allAnswers)
     if (allAnswers[0] === "False" && allAnswers[1] === "True") {  //mette sempre prima true per primo
-      console.log("entrato")
       allAnswers.reverse();
       
     }
