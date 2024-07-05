@@ -45,9 +45,9 @@ Cartella assets – contiene le immagini, il file CSS e i vari JavaScript:
 
 ###### Extra:
 Gli extra della nostra app sono:
-1.Tutte le risposte sono randomizzate TRANNE il Vero o Falso.
-2.Visualizzazione di tutte le domande e risposte giuste e sbagliate.
-3.Timer differente in maniera dinamica a seconda della difficoltà e tipologia della domanda.
-4.Favicon di Epicode perr tutte le pagine.
-5.CORIANDOLI al superamento del test.
-6.Pagina dell certificato e la stampa PDF.
+• Tutte le risposte sono randomizzate TRANNE il Vero o Falso.
+• Visualizzazione di tutte le domande e risposte giuste e sbagliate.
+• Timer differente in maniera dinamica a seconda della difficoltà e tipologia della domanda.
+• Favicon di Epicode perr tutte le pagine.
+• CORIANDOLI al superamento del test.
+• Pagina dell certificato e la stampa PDF.
