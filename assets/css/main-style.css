@@ -384,6 +384,7 @@ button {
 #header_welcome {
   text-align: left;
   padding: 0 0 1em 0;
+  margin-bottom: 55px;
 }
 
 .img-logo {
@@ -700,6 +701,9 @@ input:focus {
     max-height: 2480px;
 }
 
+.container80 {
+  width: 80%;
+}
 
 #headerCertificato {
     margin-top: 40px;
