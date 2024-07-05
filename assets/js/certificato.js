@@ -58,7 +58,7 @@ currentDate.innerText = formattedDate;
             setTimeout(function() {
                 pdf.save('certificato.pdf');
                 setTimeout(function() {
-                  window.close;
+                  window.close();
                 }, 2500)
             }, 2000); // 2000 millisecondi = 2 secondi
         });
