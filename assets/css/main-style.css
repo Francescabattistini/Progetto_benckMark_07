@@ -25,7 +25,6 @@ body {
 
 /*HEADER************************************************/
 #header_welcome {
-  margin-bottom: 1.5em;
   text-align: left;
   padding: 0 0 1em 0;
 }
@@ -88,8 +87,23 @@ body {
   justify-content: center;
 }
 
-.inputButton {
+.inpNomeCognome {
   margin-top: 60px;
+  display: flex;
+}
+
+.inpNomeCognome div {
+  flex: 0.3;
+}
+
+.inpNomeCognome input {
+  height: 35px;
+  padding-left: 6px;
+}
+
+
+.inputButton {
+  margin-top: 0px;
   display: flex;
   justify-content: space-between;
 }
@@ -368,7 +382,6 @@ button {
 }
 
 #header_welcome {
-  margin-bottom: 2em;
   text-align: left;
   padding: 0 0 1em 0;
 }
