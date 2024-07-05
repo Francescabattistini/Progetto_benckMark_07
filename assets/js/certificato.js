@@ -57,9 +57,12 @@ currentDate.innerText = formattedDate;
             // Salva il PDF dopo 2 secondi
             setTimeout(function() {
                 pdf.save('certificato.pdf');
+                setTimeout(function() {
+                  window.close;
+                }, 2500)
             }, 2000); // 2000 millisecondi = 2 secondi
         });
     }
 
     // Chiamata alla funzione per generare e scaricare il PDF dopo 2 secondi
-    setTimeout(generateAndDownloadPDF, 1000); // 2000 millisecondi = 2 secondi
+    setTimeout(generateAndDownloadPDF, 1000); // 1000 millisecondi = 1 secondi
