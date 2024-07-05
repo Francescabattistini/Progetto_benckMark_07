@@ -62,4 +62,4 @@ currentDate.innerText = formattedDate;
     }
 
     // Chiamata alla funzione per generare e scaricare il PDF dopo 2 secondi
-    setTimeout(generateAndDownloadPDF, 2000); // 2000 millisecondi = 2 secondi
+    setTimeout(generateAndDownloadPDF, 1000); // 2000 millisecondi = 2 secondi
