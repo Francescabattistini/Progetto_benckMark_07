@@ -698,7 +698,6 @@ input:focus {
 /* -------------- Certificato ---------------- */
 
 #bodyCertificato {
-    width: 800px;
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
@@ -707,14 +706,13 @@ input:focus {
 }
 
 #headerCertificato {
-    margin-top: 60px;
+    margin-top: 100px;
 }
 
 .header-box-certificato {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
-    margin-top: 200px;
 }
 
 #mainCertificato {
@@ -767,7 +765,7 @@ input:focus {
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 200px;
+    margin-bottom: 130px;
 }
 
 #currentDate {
