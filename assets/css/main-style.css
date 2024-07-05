@@ -588,8 +588,9 @@ button {
   margin-left: 10px;
 }
 
-.selectedAnswers {
+#red-check {
   color: red;
+  margin-left: 10px;
 }
 
 .questionContainer {

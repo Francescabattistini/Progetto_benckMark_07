@@ -132,19 +132,31 @@ if (userScore === "false") {
     `;
 
     request[i].answers.forEach((answer) => {
-      if (answer === request[i].correctAnswer) {
-        questionDiv.innerHTML += `
-                <p class="correctAnswer"><b><i class="fa-regular fa-square-check"></i>${answer}<i class="fa-solid fa-check" style="color: #44eebb;" id="green-check"></i> </b></p>
-            `;
-      } else if (answer === request[i].selectAnswer) {
-        questionDiv.innerHTML += `
-                <p class="selectedAnswers"><i class="fa-solid fa-xmark fa-lg"></i>${answer}</p>
-            `;
+
+
+      if(answer === request[i].selectAnswer) {  //quella selezionata deve avere il check all'inizio
+        if(request[i].selectAnswer === request[i].correctAnswer) {
+          questionDiv.innerHTML += `
+          <p class="correctAnswer"><b><i class="fa-regular fa-square-check"></i>${answer} <i class="fa-solid fa-check" style="color: #44eebb;" id="green-check"></i></b></p>
+          `;
+        } else {
+          questionDiv.innerHTML += `
+          <p class="correctAnswer"><b><i class="fa-regular fa-square-check"></i>${answer} </b></p>
+          `;
+        }
       } else {
-        questionDiv.innerHTML += `
-                <p><i class="fa-regular fa-square"></i> ${answer}</p>
-            `;
+        if (answer === request[i].correctAnswer) {
+          questionDiv.innerHTML += `
+          <p><i class="fa-regular fa-square"></i> ${answer}<i class="fa-solid fa-check" style="color: #44eebb;" id="green-check"></i></p>
+          `;
+        } else {
+          questionDiv.innerHTML += `
+          <p><i class="fa-regular fa-square"></i> ${answer}</p>
+          `;
+        }
+
       }
+
     });
 
     if (request[i].selectAnswer === request[i].correctAnswer) {
