@@ -29,31 +29,37 @@ hCognome.innerText = cognome;
 currentDate.innerText = formattedDate;
 
 
-document.getElementById('generatePDF').addEventListener('click', function () {
-  // Seleziona il contenuto della pagina
-  const element = document.getElementById('bodyCertificato');
-  
-  // Utilizza html2canvas per catturare l'elemento con il background image
-  html2canvas(element).then(canvas => {
-      // Converti il canvas in immagine
-      const imgData = canvas.toDataURL('image/jpeg');
+       // Funzione per generare e scaricare il PDF
+       function generateAndDownloadPDF() {
+        // Seleziona il contenuto della pagina
+        const element = document.getElementById('bodyCertificato');
+        
+        // Utilizza html2canvas per catturare l'elemento con il background image
+        html2canvas(element).then(canvas => {
+            // Converti il canvas in immagine
+            const imgData = canvas.toDataURL('image/jpeg');
 
-      // Dimensioni desiderate per il PDF
-      const pdfWidth = canvas.width * 0.75; // Scala il canvas a 75% della larghezza
-      const pdfHeight = canvas.height * 0.75; // Scala il canvas a 75% dell'altezza
+            // Dimensioni desiderate per il PDF
+            const pdfWidth = canvas.width * 0.75; // Scala il canvas a 75% della larghezza
+            const pdfHeight = canvas.height * 0.75; // Scala il canvas a 75% dell'altezza
 
-      // Crea un nuovo documento jsPDF in formato orizzontale
-      const { jsPDF } = window.jspdf;
-      const pdf = new jsPDF({
-          orientation: 'landscape', // Orientamento orizzontale
-          unit: 'pt', // Unità di misura: punti
-          format: [pdfWidth, pdfHeight] // Dimensioni del PDF
-      });
+            // Crea un nuovo documento jsPDF in formato orizzontale
+            const { jsPDF } = window.jspdf;
+            const pdf = new jsPDF({
+                orientation: 'landscape', // Orientamento orizzontale
+                unit: 'pt', // Unità di misura: punti
+                format: [pdfWidth, pdfHeight] // Dimensioni del PDF
+            });
 
-      // Aggiungi l'immagine al PDF
-      pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
+            // Aggiungi l'immagine al PDF
+            pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight);
 
-      // Salva il PDF
-      pdf.save('certificato.pdf');
-  });
-});
+            // Salva il PDF dopo 2 secondi
+            setTimeout(function() {
+                pdf.save('certificato.pdf');
+            }, 2000); // 2000 millisecondi = 2 secondi
+        });
+    }
+
+    // Chiamata alla funzione per generare e scaricare il PDF dopo 2 secondi
+    setTimeout(generateAndDownloadPDF, 2000); // 2000 millisecondi = 2 secondi
