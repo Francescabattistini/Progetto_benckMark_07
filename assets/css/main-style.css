@@ -11,6 +11,12 @@ body {
   background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  
+}
+
+i {
+  color: white;
+  margin-right: 3px;
 }
 
 #body_welcome {
@@ -99,6 +105,8 @@ body {
 .inpNomeCognome input {
   height: 35px;
   padding-left: 6px;
+  background-color: white;
+  border: 1px solid black;
 }
 
 
@@ -231,11 +239,11 @@ video {
 .box-question {
   width: 100%;
   text-align: center;
-  height: 60vh;
-  margin-top: 50px;
-  display: flex;
+  height: 50vh;
+  margin-top: 90px;
+  /* display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center; */
 }
 
 .title-box-question {
@@ -565,7 +573,7 @@ button {
 }
 
 .indexRequest {
-  color: #00ffff;
+  color: white;
 }
 
 .correctAnswer {
@@ -582,8 +590,15 @@ button {
 
 .hrQuestion {
   width: 100%;
-  background-color: #00ffff;
+  background-color: white;
   margin: 15px 0px 15px 0px;
+}
+
+.download-certificate {
+  text-decoration: none;
+  cursor: pointer;
+  color: #00ffff;
+  margin-top: 15px;
 }
 
 /* ////////////////////////////////////// FEEDBACK///////////////////////////////////////////////////////////// */
@@ -600,7 +615,6 @@ button {
 .container80 {
   width: 80%;
   margin-top: 40px;
-  /* margin-bottom: 40px; */
 }
 
 .body-container {

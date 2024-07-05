@@ -105,13 +105,13 @@ if (userScore === "false") {
     }</p>
 	  <p class="${passFailText === "Pass" ? "blue" : "red"}">${
     passFailText === "Pass"
-      ? "You passed the exam"
-      : "You did not pass the exam"
+      ? "You passed the exam."
+      : "You did not pass the exam."
   }</p>
 	  ${
       passFailText === "Pass"
         ? `<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder).</p>
-          <a href="certificato.html" target="_blank">Download Certificate</a>
+          <a href="certificato.html" target="_blank" class="download-certificate">Download Certificate</a>
         `
         : '<p style="font-size: 100px;">😢</p>'
     }
@@ -134,15 +134,15 @@ if (userScore === "false") {
     request[i].answers.forEach((answer) => {
       if (answer === request[i].correctAnswer) {
         questionDiv.innerHTML += `
-                <p class="correctAnswer"><b>✅ ${answer}</b></p>
+                <p class="correctAnswer"><b><i class="fa-regular fa-square-check"></i> ${answer}</b></p>
             `;
       } else if (answer === request[i].selectAnswer) {
         questionDiv.innerHTML += `
-                <p class="selectedAnswers">❌ ${answer}</p>
+                <p class="selectedAnswers"><i class="fa-solid fa-xmark fa-lg"></i>${answer}</p>
             `;
       } else {
         questionDiv.innerHTML += `
-                <p>⭕ ${answer}</p>
+                <p><i class="fa-regular fa-square"></i> ${answer}</p>
             `;
       }
     });

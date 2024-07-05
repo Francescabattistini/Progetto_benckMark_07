@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/main-style.css" />
-    <title>Results Page</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="icon" href="assets/img/EPICODE_fav.png" type="image/png" />
-  </head>
 
-  <body id="body_result">
-    <div class="container80">
-      <header id="headerResult">
-        <img
-          class="img-logo"
-          src="assets/img/epicode_logo.png"
-          alt="Logo_Epicode"
-        />
-      </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/main-style.css" />
+  <title>Results Page</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="icon" href="assets/img/EPICODE_fav.png" type="image/png" />
+</head>
 
-      <div class="titleResult">
-        <h1>Results</h1>
-        <h3>The summary of your answers:</h3>
-        <h4 id="cheater"></h4>
-        <!--ti ho fregato-->
-        <div id="divIframe"></div>
-        <!--video-->
-      </div>
+<body id="body_result">
+  <div class="container80">
+    <header id="headerResult">
+      <img class="img-logo" src="assets/img/epicode_logo.png" alt="Logo_Epicode" />
+    </header>
 
-      <main class="main_result" id="main_result">
-        <div id="correctDiv">
-          <div class="correct-content"></div>
-        </div>
-
-        <div class="chartDiv">
-          <div class="chart-box">
-            <canvas id="my-chart"></canvas>
-
-            <div id="inner-chart" class="center"></div>
-          </div>
-        </div>
-
-        <div id="wrongDiv">
-          <div class="wrong-content"></div>
-        </div>
-      </main>
-
-      <div class="divBottoneResult center">
-        <button class="bottoneResult">RATE US</button>
-        <!-- <button class="bottoneResult" onclick="rateUs()">RATE US</button> -->
-      </div>
-
-      <div id="divRequest"></div>
+    <div class="titleResult">
+      <h1>Results</h1>
+      <h3>The summary of your answers:</h3>
+      <h4 id="cheater"></h4>
+      <!--ti ho fregato-->
+      <div id="divIframe"></div>
+      <!--video-->
     </div>
-    <script src="assets/js/result.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
-  </body>
+
+    <main class="main_result" id="main_result">
+      <div id="correctDiv">
+        <div class="correct-content"></div>
+      </div>
+
+      <div class="chartDiv">
+        <div class="chart-box">
+          <canvas id="my-chart"></canvas>
+
+          <div id="inner-chart" class="center"></div>
+        </div>
+      </div>
+
+      <div id="wrongDiv">
+        <div class="wrong-content"></div>
+      </div>
+    </main>
+
+    <div class="divBottoneResult center">
+      <button class="bottoneResult">RATE US</button>
+      <!-- <button class="bottoneResult" onclick="rateUs()">RATE US</button> -->
+    </div>
+
+    <div id="divRequest"></div>
+  </div>
+  <script src="assets/js/result.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</body>
+
 </html>
