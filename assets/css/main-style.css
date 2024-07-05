@@ -693,12 +693,12 @@ input:focus {
 /* -------------- Certificato ---------------- */
 
 #bodyCertificato {
-    max-width: 297px 210px;
+    width: 800px;
     font-family: 'Outfit', Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     color: white;
-    max-height: 2480px;
+    height: 100%;
 }
 
 .container80 {
@@ -706,13 +706,14 @@ input:focus {
 }
 
 #headerCertificato {
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .header-box-certificato {
     display: flex;
     justify-content: space-between;
     margin-bottom: 40px;
+    margin-top: 200px;
 }
 
 #mainCertificato {
@@ -765,6 +766,7 @@ input:focus {
     padding-bottom: 10px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 200px;
 }
 
 #currentDate {
