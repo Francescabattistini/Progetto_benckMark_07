@@ -1,22 +1,23 @@
-var options = {   //opzioni per il chart
+var options = {
+  //opzioni per il chart
   plugins: {
     legend: {
-      display: false
-    }
+      display: false,
+    },
   },
   cutout: "70%",
   responsive: true,
-  maintainAspectRatio: false
+  maintainAspectRatio: false,
 };
 
-const jsonString = localStorage.getItem('request'); 
+const jsonString = localStorage.getItem("request");
 let request;
 if (jsonString) {
   // Convertire la stringa JSON in un array di oggetti
-   request = JSON.parse(jsonString);
+  request = JSON.parse(jsonString);
   console.log(request);
 } else {
-  console.log('No data found in local storage.');
+  console.log("No data found in local storage.");
 }
 
 // Recupera il punteggio dell'utente dal localStorage
@@ -50,16 +51,15 @@ if (userScore === "false") {
   const par = document.getElementById("cheater");
   par.innerText = "GOTCHA";
 
-  document.getElementById('divIframe').innerHTML = `
+  document.getElementById("divIframe").innerHTML = `
             <video width="350" autoplay loop muted>
                 <source src="https://external-preview.redd.it/uafMLScOUutOCmzRcIu2h4lgTa6o2tiHAjgP_p8aUuI.gif?width=245&format=mp4&s=7c11aed17fb663ddbd4cb491264137a6723f773d" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         `;
 
-
   const innerChart = document.getElementById("inner-chart"); //questi
-  innerChart.remove()
+  innerChart.remove();
 
   const canvas = document.querySelector("canvas");
   canvas.remove();
@@ -92,7 +92,7 @@ if (userScore === "false") {
         },
       ],
     },
-    options: options
+    options: options,
   });
 
   // Determina se l'utente ha passato o fallito l'esame
@@ -100,65 +100,65 @@ if (userScore === "false") {
 
   // Aggiorna il contenuto interno del grafico a ciambella
   document.getElementById("inner-chart").innerHTML = `
-	  <p class="title-chart">${passFailText === "Pass" ? "Congratulations!" : "Try Again!"
+	  <p class="title-chart">${
+      passFailText === "Pass" ? "Congratulations!" : "Try Again!"
     }</p>
-	  <p class="${passFailText === "Pass" ? "blue" : "red"}">${passFailText === "Pass"
+	  <p class="${passFailText === "Pass" ? "blue" : "red"}">${
+    passFailText === "Pass"
       ? "You passed the exam"
       : "You did not pass the exam"
-    }</p>
-	  ${passFailText === "Pass"
-      ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder).</p>'
-      : '<p style="font-size: 100px;">😢</p>'
+  }</p>
+	  ${
+      passFailText === "Pass"
+        ? '<br><p class="description-result">We\'ll send you the certificate in a few minutes. Check your email (including promotions / spam folder).</p>'
+        : '<p style="font-size: 100px;">😢</p>'
     }
 	`;
 
+  //*********************************************************************************+ */
+  const divRequest = document.getElementById("divRequest");
 
-//*********************************************************************************+ */
-const divRequest = document.getElementById("divRequest");
-
-for (let i = 0; i < request.length; i++) {
+  for (let i = 0; i < request.length; i++) {
     flagCorrect = false;
     // Creare un nuovo div per la domanda e le risposte
     const questionDiv = document.createElement("div");
     questionDiv.classList.add("questionContainer");
 
     questionDiv.innerHTML += `
-        <h2><span class="indexRequest">${i +1}. </span><b>${request[i].question}</b></h2>
+        <h2><span class="indexRequest">${i + 1}. </span><b>${
+      request[i].question
+    }</b></h2>
     `;
 
     request[i].answers.forEach((answer) => {
-        if (answer === request[i].correctAnswer) {
-            questionDiv.innerHTML += `
+      if (answer === request[i].correctAnswer) {
+        questionDiv.innerHTML += `
                 <p class="correctAnswer"><b>✅ ${answer}</b></p>
             `;
-        } else if (answer === request[i].selectAnswer) {
-            questionDiv.innerHTML += `
+      } else if (answer === request[i].selectAnswer) {
+        questionDiv.innerHTML += `
                 <p class="selectedAnswers">❌ ${answer}</p>
             `;
-        }  else {
-            questionDiv.innerHTML += `
+      } else {
+        questionDiv.innerHTML += `
                 <p>⭕ ${answer}</p>
             `;
-        }
+      }
     });
 
-    if(request[i].selectAnswer === request[i].correctAnswer) {   //se la risposta è corretta
-      questionDiv.style.backgroundColor = "rgba(0, 128, 0, 0.3)"  //colore verde
+    if (request[i].selectAnswer === request[i].correctAnswer) {
+      //se la risposta è corretta
+      questionDiv.style.backgroundColor = "rgba(0, 128, 0, 0.3)"; //colore verde
     } else {
-      questionDiv.style.backgroundColor = "rgba(255, 0, 0, 0.2)";  //colore rosso
+      questionDiv.style.backgroundColor = "rgba(255, 0, 0, 0.2)"; //colore rosso
     }
-
-    
 
     // Aggiungere il div della domanda al div principale
     divRequest.appendChild(questionDiv);
-    const hrQuestion = document.createElement("hr");  //aggiunge un hr
+    const hrQuestion = document.createElement("hr"); //aggiunge un hr
     hrQuestion.classList.add("hrQuestion");
-    divRequest.appendChild(hrQuestion)
-
-
-}
-
+    divRequest.appendChild(hrQuestion);
+  }
 }
 
 // Aggiunge un event listener per il pulsante "RATE US" per reindirizzare alla pagina di feedback

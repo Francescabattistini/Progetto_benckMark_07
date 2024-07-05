@@ -120,7 +120,7 @@ input[type="checkbox"]:checked {
 
 /* Aggiunge il segno di spunta */
 input[type="checkbox"]:checked::after {
-  content: '✓';
+  content: "✓";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -171,7 +171,9 @@ input[type="checkbox"]:checked::after {
 }
 
 video {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 10px;
 }
 
@@ -273,9 +275,11 @@ button {
 }
 
 .button-answer:hover {
-  background: linear-gradient(176deg,
-      rgba(210, 0, 148, 1) 31%,
-      rgba(144, 0, 128, 1) 70%);
+  background: linear-gradient(
+    176deg,
+    rgba(210, 0, 148, 1) 31%,
+    rgba(144, 0, 128, 1) 70%
+  );
 }
 
 .body-box-footer {
@@ -393,7 +397,7 @@ button {
 .titleResult h3 {
   margin: 0px;
   font-weight: 300;
-  font-size: 28px
+  font-size: 28px;
 }
 
 .logo {
@@ -545,19 +549,19 @@ button {
   color: #00ffff;
 }
 
-.correctAnswer{
+.correctAnswer {
   color: green;
 }
 
-.selectedAnswers{
+.selectedAnswers {
   color: red;
 }
 
-.questionContainer{
+.questionContainer {
   padding: 10px;
 }
 
-.hrQuestion{
+.hrQuestion {
   width: 100%;
   background-color: #00ffff;
   margin: 15px 0px 15px 0px;
@@ -566,9 +570,9 @@ button {
 /* ////////////////////////////////////// FEEDBACK///////////////////////////////////////////////////////////// */
 
 #body_feedback {
-  background-image: url(../img/bg.jpg);
+  /* background-image: url(../img/bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
   display: flex;
   justify-content: center;
   margin-bottom: 200px;
